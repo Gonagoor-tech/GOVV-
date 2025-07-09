@@ -83,12 +83,12 @@
   @apply transition-transform duration-300 hover:scale-105;
 }
 
-.glow-green {
-  box-shadow: 0 0 20px rgba(57, 255, 20, 0.3);
+.glow-blue {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
 }
 
 .text-gradient {
-  background: linear-gradient(45deg, #39FF14, #2DD10F);
+  background: linear-gradient(45deg, #3B82F6, #2563EB);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

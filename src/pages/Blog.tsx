@@ -80,7 +80,7 @@ const Blog = () => {
       <section className="py-20 bg-gradient-to-r from-go-black to-gray-900 text-white">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl font-montserrat font-bold mb-6">
-            Go VV <span className="text-go-green">Blog</span>
+            Go VV <span className="text-go-blue">Blog</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Insights, stories, and updates from the world of electric mobility and sustainable transportation
@@ -101,13 +101,13 @@ const Blog = () => {
               <div className="p-8">
                 <div className="flex flex-wrap gap-2 mb-4">
                   {blogPosts[0].tags.map((tag, index) => (
-                    <span key={index} className="bg-go-green text-go-black px-3 py-1 rounded-full text-sm font-medium">
+                    <span key={index} className="bg-go-blue text-white px-3 py-1 rounded-full text-sm font-medium">
                       {tag}
                     </span>
                   ))}
                 </div>
                 
-                <h2 className="text-3xl font-montserrat font-bold mb-4 text-go-black hover:text-go-green transition-colors">
+                <h2 className="text-3xl font-montserrat font-bold mb-4 text-go-black hover:text-go-blue transition-colors">
                   <Link to={`/blog/${blogPosts[0].id}`}>{blogPosts[0].title}</Link>
                 </h2>
                 
@@ -124,7 +124,7 @@ const Blog = () => {
                   
                   <Link 
                     to={`/blog/${blogPosts[0].id}`}
-                    className="bg-go-green text-go-black px-6 py-2 rounded-full font-semibold hover:bg-go-green-dark transition-colors"
+                    className="bg-go-blue text-white px-6 py-2 rounded-full font-semibold hover:bg-go-blue-dark transition-colors"
                   >
                     Read More
                   </Link>
@@ -139,7 +139,7 @@ const Blog = () => {
       <section className="py-20 bg-gray-100">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-montserrat font-bold text-center mb-16 text-go-black">
-            Latest <span className="text-go-green">Articles</span>
+            Latest <span className="text-go-blue">Articles</span>
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
@@ -160,7 +160,7 @@ const Blog = () => {
                     ))}
                   </div>
                   
-                  <h3 className="text-xl font-montserrat font-bold mb-3 text-go-black hover:text-go-green transition-colors">
+                  <h3 className="text-xl font-montserrat font-bold mb-3 text-go-black hover:text-go-blue transition-colors">
                     <Link to={`/blog/${post.id}`}>{post.title}</Link>
                   </h3>
                   
@@ -175,7 +175,7 @@ const Blog = () => {
                     
                     <Link 
                       to={`/blog/${post.id}`}
-                      className="text-go-green font-semibold hover:text-go-green-dark transition-colors"
+                      className="text-go-blue font-semibold hover:text-go-blue-dark transition-colors"
                     >
                       Read More →
                     </Link>
@@ -191,7 +191,7 @@ const Blog = () => {
       <section className="py-20 bg-go-black text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-montserrat font-bold mb-6">
-            Stay <span className="text-go-green">Updated</span>
+            Stay <span className="text-go-blue">Updated</span>
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Subscribe to our newsletter and get the latest insights on electric mobility, technology trends, and Go VV updates.
@@ -201,9 +201,9 @@ const Blog = () => {
             <input
               type="email"
               placeholder="Enter your email address"
-              className="flex-1 bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:border-go-green focus:outline-none"
+              className="flex-1 bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:border-go-blue focus:outline-none"
             />
-            <button className="bg-go-green text-go-black px-8 py-3 rounded-lg font-semibold hover:bg-go-green-dark transition-colors">
+            <button className="bg-go-blue text-white px-8 py-3 rounded-lg font-semibold hover:bg-go-blue-dark transition-colors">
               Subscribe
             </button>
           </div>

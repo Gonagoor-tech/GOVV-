@@ -6,7 +6,7 @@ const About = () => {
       <section className="py-20 bg-gradient-to-r from-go-black to-gray-900 text-white">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl font-montserrat font-bold mb-6">
-            About <span className="text-go-green">Go VV</span>
+            About <span className="text-go-blue">Go VV</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Pioneering India's electric mobility revolution with innovative, sustainable, and smart transportation solutions
@@ -54,7 +54,7 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="text-4xl font-montserrat font-bold mb-6 text-go-black">
-              Our <span className="text-go-green">Story</span>
+              Our <span className="text-go-blue">Story</span>
             </h2>
             <p className="text-lg text-gray-600">
               Born from the vision of creating India's next-generation e-mobility company
@@ -95,13 +95,13 @@ const About = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-montserrat font-bold text-center mb-16 text-go-black">
-            Our <span className="text-go-green">Journey</span>
+            Our <span className="text-go-blue">Journey</span>
           </h2>
           
           <div className="max-w-4xl mx-auto">
             <div className="relative">
               {/* Timeline Line */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-go-green hidden md:block"></div>
+              <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-go-blue hidden md:block"></div>
               
               {[
                 {
@@ -132,7 +132,7 @@ const About = () => {
                 <div key={index} className={`flex items-center mb-12 ${milestone.side === 'right' ? 'md:flex-row-reverse' : ''}`}>
                   <div className={`w-full md:w-5/12 ${milestone.side === 'right' ? 'md:text-right' : ''}`}>
                     <div className="bg-gray-50 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
-                      <span className="text-go-green font-bold text-lg">{milestone.year}</span>
+                      <span className="text-go-blue font-bold text-lg">{milestone.year}</span>
                       <h3 className="text-xl font-montserrat font-bold mb-2 text-go-black">{milestone.title}</h3>
                       <p className="text-gray-600">{milestone.description}</p>
                     </div>
@@ -140,7 +140,7 @@ const About = () => {
                   
                   {/* Timeline Dot */}
                   <div className="hidden md:flex w-2/12 justify-center">
-                    <div className="w-4 h-4 bg-go-green rounded-full border-4 border-white shadow-lg"></div>
+                    <div className="w-4 h-4 bg-go-blue rounded-full border-4 border-white shadow-lg"></div>
                   </div>
                   
                   <div className="hidden md:block w-5/12"></div>
@@ -155,7 +155,7 @@ const About = () => {
       <section className="py-20 bg-gray-100">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-montserrat font-bold text-center mb-16 text-go-black">
-            Meet Our <span className="text-go-green">Team</span>
+            Meet Our <span className="text-go-blue">Team</span>
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -186,7 +186,7 @@ const About = () => {
                   className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
                 />
                 <h3 className="text-xl font-montserrat font-bold mb-2 text-go-black">{member.name}</h3>
-                <p className="text-go-green font-semibold mb-3">{member.role}</p>
+                <p className="text-go-blue font-semibold mb-3">{member.role}</p>
                 <p className="text-gray-600 text-sm">{member.bio}</p>
               </div>
             ))}
@@ -198,7 +198,7 @@ const About = () => {
       <section className="py-20 bg-go-black text-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-montserrat font-bold text-center mb-16">
-            Our <span className="text-go-green">Values</span>
+            Our <span className="text-go-blue">Values</span>
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -210,7 +210,7 @@ const About = () => {
             ].map((value, index) => (
               <div key={index} className="text-center p-6 rounded-2xl bg-gray-900 hover:bg-gray-800 transition-colors">
                 <div className="text-4xl mb-4">{value.icon}</div>
-                <h3 className="text-xl font-montserrat font-bold mb-3 text-go-green">{value.title}</h3>
+                <h3 className="text-xl font-montserrat font-bold mb-3 text-go-blue">{value.title}</h3>
                 <p className="text-gray-300">{value.desc}</p>
               </div>
             ))}

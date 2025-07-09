@@ -60,7 +60,7 @@ const Bikes = () => {
       <section className="py-20 bg-gradient-to-r from-go-black to-gray-900 text-white">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl font-montserrat font-bold mb-6">
-            Our <span className="text-go-green">Electric Bikes</span>
+            Our <span className="text-go-blue">Electric Bikes</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Choose from our range of premium electric bicycles designed for every need and budget
@@ -83,7 +83,7 @@ const Bikes = () => {
                 <div className="p-6">
                   <div className="flex justify-between items-start mb-4">
                     <h3 className="text-2xl font-montserrat font-bold text-go-black">{bike.name}</h3>
-                    <span className="text-2xl font-bold text-go-green">{bike.price}</span>
+                    <span className="text-2xl font-bold text-go-blue">{bike.price}</span>
                   </div>
                   
                   <p className="text-gray-600 mb-6">{bike.description}</p>
@@ -107,11 +107,11 @@ const Bikes = () => {
                   <div className="flex gap-3">
                     <button 
                       onClick={() => setSelectedBike(selectedBike === bike.id ? null : bike.id)}
-                      className="flex-1 border-2 border-go-green text-go-green px-4 py-2 rounded-lg font-semibold hover:bg-go-green hover:text-go-black transition-colors"
+                      className="flex-1 border-2 border-go-blue text-go-blue px-4 py-2 rounded-lg font-semibold hover:bg-go-blue hover:text-white transition-colors"
                     >
                       {selectedBike === bike.id ? 'Hide Details' : 'Learn More'}
                     </button>
-                    <button className="flex-1 bg-go-green text-go-black px-4 py-2 rounded-lg font-semibold hover:bg-go-green-dark transition-colors">
+                    <button className="flex-1 bg-go-blue text-white px-4 py-2 rounded-lg font-semibold hover:bg-go-blue-dark transition-colors">
                       Pre-Order
                     </button>
                   </div>
@@ -139,7 +139,7 @@ const Bikes = () => {
                       <ul className="space-y-1">
                         {bike.features.map((feature, index) => (
                           <li key={index} className="flex items-center text-sm">
-                            <Check size={16} className="text-go-green mr-2" />
+                            <Check size={16} className="text-go-blue mr-2" />
                             {feature}
                           </li>
                         ))}
@@ -185,7 +185,7 @@ const Bikes = () => {
                   <tr>
                     <td className="border border-gray-300 p-4 font-medium">Price</td>
                     {bikes.map((bike) => (
-                      <td key={bike.id} className="border border-gray-300 p-4 text-center text-go-green font-bold">
+                      <td key={bike.id} className="border border-gray-300 p-4 text-center text-go-blue font-bold">
                         {bike.price}
                       </td>
                     ))}

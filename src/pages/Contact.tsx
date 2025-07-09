@@ -30,7 +30,7 @@ const Contact = () => {
       <section className="py-20 bg-gradient-to-r from-go-black to-gray-900 text-white">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl font-montserrat font-bold mb-6">
-            Contact <span className="text-go-green">Us</span>
+            Contact <span className="text-go-blue">Us</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Get in touch with our team. We're here to help you with any questions about Go VV electric bicycles.
@@ -45,13 +45,13 @@ const Contact = () => {
             {/* Contact Information */}
             <div className="space-y-8">
               <h2 className="text-3xl font-montserrat font-bold text-go-black mb-8">
-                Get in <span className="text-go-green">Touch</span>
+                Get in <span className="text-go-blue">Touch</span>
               </h2>
               
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <div className="bg-go-green p-3 rounded-full">
-                    <svg className="w-6 h-6 text-go-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="bg-go-blue p-3 rounded-full">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                   </div>
@@ -63,8 +63,8 @@ const Contact = () => {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="bg-go-green p-3 rounded-full">
-                    <svg className="w-6 h-6 text-go-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="bg-go-blue p-3 rounded-full">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>
                   </div>
@@ -76,8 +76,8 @@ const Contact = () => {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="bg-go-green p-3 rounded-full">
-                    <svg className="w-6 h-6 text-go-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="bg-go-blue p-3 rounded-full">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
@@ -94,8 +94,8 @@ const Contact = () => {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="bg-go-green p-3 rounded-full">
-                    <svg className="w-6 h-6 text-go-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="bg-go-blue p-3 rounded-full">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
@@ -112,7 +112,7 @@ const Contact = () => {
             {/* Contact Form */}
             <div className="bg-gray-50 rounded-2xl p-8">
               <h2 className="text-3xl font-montserrat font-bold text-go-black mb-8">
-                Send us a <span className="text-go-green">Message</span>
+                Send us a <span className="text-go-blue">Message</span>
               </h2>
               
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -127,7 +127,7 @@ const Contact = () => {
                     value={formData.fullName}
                     onChange={handleChange}
                     required
-                    className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:border-go-green focus:outline-none transition-colors"
+                    className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:border-go-blue focus:outline-none transition-colors"
                     placeholder="Enter your full name"
                   />
                 </div>
@@ -143,7 +143,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:border-go-green focus:outline-none transition-colors"
+                    className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:border-go-blue focus:outline-none transition-colors"
                     placeholder="Enter your email address"
                   />
                 </div>
@@ -158,7 +158,7 @@ const Contact = () => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:border-go-green focus:outline-none transition-colors"
+                    className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:border-go-blue focus:outline-none transition-colors"
                     placeholder="Enter your contact number"
                   />
                 </div>
@@ -174,14 +174,14 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:border-go-green focus:outline-none transition-colors resize-none"
+                    className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:border-go-blue focus:outline-none transition-colors resize-none"
                     placeholder="Tell us how we can help you..."
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-go-green text-go-black py-3 px-6 rounded-lg font-semibold hover:bg-go-green-dark transition-colors"
+                  className="w-full bg-go-blue text-white py-3 px-6 rounded-lg font-semibold hover:bg-go-blue-dark transition-colors"
                 >
                   Send Message
                 </button>
@@ -195,7 +195,7 @@ const Contact = () => {
       <section className="py-20 bg-gray-100">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-montserrat font-bold text-center mb-16 text-go-black">
-            Visit Our <span className="text-go-green">Showroom</span>
+            Visit Our <span className="text-go-blue">Showroom</span>
           </h2>
           
           <div className="max-w-4xl mx-auto">
@@ -218,7 +218,7 @@ const Contact = () => {
                 <p className="text-gray-600 mb-4">
                   Visit our showroom to experience Go VV electric bicycles firsthand. Test rides available!
                 </p>
-                <button className="bg-go-green text-go-black px-6 py-2 rounded-full font-semibold hover:bg-go-green-dark transition-colors">
+                <button className="bg-go-blue text-white px-6 py-2 rounded-full font-semibold hover:bg-go-blue-dark transition-colors">
                   Get Directions
                 </button>
               </div>

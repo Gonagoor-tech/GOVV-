@@ -32,7 +32,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="text-2xl font-montserrat font-bold text-white">
-            Go <span className="text-go-green">VV</span>
+            Go <span className="text-go-blue">VV</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -41,14 +41,14 @@ const Navbar = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className={`text-sm font-medium transition-colors hover:text-go-green ${
-                  location.pathname === item.path ? 'text-go-green' : 'text-white'
+                className={`text-sm font-medium transition-colors hover:text-go-blue ${
+                  location.pathname === item.path ? 'text-go-blue' : 'text-white'
                 }`}
               >
                 {item.name}
               </Link>
             ))}
-            <button className="bg-go-green text-go-black px-6 py-2 rounded-full font-semibold hover:bg-go-green-dark transition-colors">
+            <button className="bg-go-blue text-white px-6 py-2 rounded-full font-semibold hover:bg-go-blue-dark transition-colors">
               Pre-Order
             </button>
           </div>
@@ -70,8 +70,8 @@ const Navbar = () => {
                 <Link
                   key={item.name}
                   to={item.path}
-                  className={`block px-4 py-2 text-sm font-medium transition-colors hover:text-go-green ${
-                    location.pathname === item.path ? 'text-go-green bg-gray-800' : 'text-white'
+                  className={`block px-4 py-2 text-sm font-medium transition-colors hover:text-go-blue ${
+                    location.pathname === item.path ? 'text-go-blue bg-gray-800' : 'text-white'
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -79,7 +79,7 @@ const Navbar = () => {
                 </Link>
               ))}
               <div className="px-4 pt-2">
-                <button className="w-full bg-go-green text-go-black px-6 py-2 rounded-full font-semibold hover:bg-go-green-dark transition-colors">
+                <button className="w-full bg-go-blue text-white px-6 py-2 rounded-full font-semibold hover:bg-go-blue-dark transition-colors">
                   Pre-Order
                 </button>
               </div>

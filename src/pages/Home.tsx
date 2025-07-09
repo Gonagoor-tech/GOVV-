@@ -46,7 +46,7 @@ const Home = () => {
             <br />
             Go <span className="text-gradient">Freely</span>.
             <br />
-            Go <span className="text-go-green">VV</span>.
+            Go <span className="text-go-blue">VV</span>.
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-8 animate-fade-in" style={{animationDelay: '0.2s'}}>
@@ -56,11 +56,11 @@ const Home = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{animationDelay: '0.4s'}}>
             <Link 
               to="/bikes" 
-              className="bg-go-green text-go-black px-8 py-4 rounded-full font-semibold text-lg hover:bg-go-green-dark transition-all duration-300 hover-scale flex items-center justify-center gap-2"
+              className="bg-go-blue text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-go-blue-dark transition-all duration-300 hover-scale flex items-center justify-center gap-2"
             >
               Explore Our Bikes <ArrowRight size={20} />
             </Link>
-            <button className="border-2 border-go-green text-go-green px-8 py-4 rounded-full font-semibold text-lg hover:bg-go-green hover:text-go-black transition-all duration-300 hover-scale">
+            <button className="border-2 border-go-blue text-go-blue px-8 py-4 rounded-full font-semibold text-lg hover:bg-go-blue hover:text-white transition-all duration-300 hover-scale">
               Pre-Order Now
             </button>
           </div>
@@ -78,7 +78,7 @@ const Home = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-montserrat font-bold text-center mb-16 text-go-black">
-            Why Choose <span className="text-go-green">Go VV</span>?
+            Why Choose <span className="text-go-blue">Go VV</span>?
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -102,7 +102,7 @@ const Home = () => {
       <section className="py-20 bg-gray-100">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-montserrat font-bold text-center mb-16 text-go-black">
-            Our <span className="text-go-green">Bike Models</span>
+            Our <span className="text-go-blue">Bike Models</span>
           </h2>
           
           <div className="relative max-w-4xl mx-auto">
@@ -121,11 +121,11 @@ const Home = () => {
                       />
                       <div className="text-center">
                         <h3 className="text-2xl font-montserrat font-bold mb-2">{bike.name}</h3>
-                        <p className="text-go-green text-xl font-semibold mb-2">{bike.price}</p>
+                        <p className="text-go-blue text-xl font-semibold mb-2">{bike.price}</p>
                         <p className="text-gray-600 mb-4">Range: {bike.range}</p>
                         <Link 
                           to="/bikes"
-                          className="inline-block bg-go-green text-go-black px-6 py-2 rounded-full font-semibold hover:bg-go-green-dark transition-colors"
+                          className="inline-block bg-go-blue text-white px-6 py-2 rounded-full font-semibold hover:bg-go-blue-dark transition-colors"
                         >
                           Learn More
                         </Link>
@@ -143,7 +143,7 @@ const Home = () => {
                   key={index}
                   onClick={() => setCurrentSlide(index)}
                   className={`w-3 h-3 rounded-full transition-colors ${
-                    currentSlide === index ? 'bg-go-green' : 'bg-gray-400'
+                    currentSlide === index ? 'bg-go-blue' : 'bg-gray-400'
                   }`}
                 />
               ))}
@@ -156,7 +156,7 @@ const Home = () => {
       <section className="py-20 bg-go-black text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-montserrat font-bold mb-6">
-            Ready to <span className="text-go-green">Transform</span> Your Commute?
+            Ready to <span className="text-go-blue">Transform</span> Your Commute?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Join thousands of riders who have already made the switch to smart, sustainable urban mobility.
@@ -164,13 +164,13 @@ const Home = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               to="/bikes"
-              className="bg-go-green text-go-black px-8 py-4 rounded-full font-semibold text-lg hover:bg-go-green-dark transition-all duration-300 hover-scale"
+              className="bg-go-blue text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-go-blue-dark transition-all duration-300 hover-scale"
             >
               View All Models
             </Link>
             <Link 
               to="/contact"
-              className="border-2 border-go-green text-go-green px-8 py-4 rounded-full font-semibold text-lg hover:bg-go-green hover:text-go-black transition-all duration-300 hover-scale"
+              className="border-2 border-go-blue text-go-blue px-8 py-4 rounded-full font-semibold text-lg hover:bg-go-blue hover:text-white transition-all duration-300 hover-scale"
             >
               Contact Us
             </Link>

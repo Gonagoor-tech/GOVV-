@@ -54,8 +54,8 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				'go-black': '#0B0B0B',
-				'go-green': '#39FF14',
-				'go-green-dark': '#2DD10F',
+				'go-blue': '#3B82F6',
+				'go-blue-dark': '#2563EB',
 			},
 			fontFamily: {
 				'montserrat': ['Montserrat', 'sans-serif'],
@@ -92,8 +92,8 @@ export default {
 					}
 				},
 				'glow': {
-					'0%, 100%': { boxShadow: '0 0 20px rgba(57, 255, 20, 0.3)' },
-					'50%': { boxShadow: '0 0 30px rgba(57, 255, 20, 0.6)' }
+					'0%, 100%': { boxShadow: '0 0 20px rgba(59, 130, 246, 0.3)' },
+					'50%': { boxShadow: '0 0 30px rgba(59, 130, 246, 0.6)' }
 				}
 			},
 			animation: {

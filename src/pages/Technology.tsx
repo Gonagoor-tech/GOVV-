@@ -39,7 +39,7 @@ const Technology = () => {
       <section className="py-20 bg-gradient-to-r from-go-black to-gray-900 text-white">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl font-montserrat font-bold mb-6">
-            Advanced <span className="text-go-green">Technology</span>
+            Advanced <span className="text-go-blue">Technology</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Discover the cutting-edge technology that powers every Go VV electric bicycle
@@ -52,7 +52,7 @@ const Technology = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="text-4xl font-montserrat font-bold mb-6 text-go-black">
-              Innovation at Every <span className="text-go-green">Level</span>
+              Innovation at Every <span className="text-go-blue">Level</span>
             </h2>
             <p className="text-lg text-gray-600">
               Our electric bicycles are engineered with the latest technology to provide an unmatched riding experience. 
@@ -79,7 +79,7 @@ const Technology = () => {
                   <div className="grid grid-cols-2 gap-4">
                     {tech.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center">
-                        <div className="w-2 h-2 bg-go-green rounded-full mr-3"></div>
+                        <div className="w-2 h-2 bg-go-blue rounded-full mr-3"></div>
                         <span className="text-gray-700">{feature}</span>
                       </div>
                     ))}
@@ -95,7 +95,7 @@ const Technology = () => {
       <section className="py-20 bg-gray-100">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-montserrat font-bold text-center mb-16 text-go-black">
-            Technical <span className="text-go-green">Specifications</span>
+            Technical <span className="text-go-blue">Specifications</span>
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -108,11 +108,11 @@ const Technology = () => {
               { category: 'Display', specs: ['LCD Color Display', 'Speed & Distance', 'Battery Level', 'Navigation Assistance'] }
             ].map((item, index) => (
               <div key={index} className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
-                <h3 className="text-xl font-montserrat font-bold mb-4 text-go-green">{item.category}</h3>
+                <h3 className="text-xl font-montserrat font-bold mb-4 text-go-blue">{item.category}</h3>
                 <ul className="space-y-2">
                   {item.specs.map((spec, specIndex) => (
                     <li key={specIndex} className="text-gray-600 flex items-start">
-                      <span className="text-go-green mr-2">•</span>
+                      <span className="text-go-blue mr-2">•</span>
                       {spec}
                     </li>
                   ))}
@@ -128,7 +128,7 @@ const Technology = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-montserrat font-bold mb-6">
-              Smart <span className="text-go-green">Mobile App</span>
+              Smart <span className="text-go-blue">Mobile App</span>
             </h2>
             <p className="text-xl text-gray-300 mb-12">
               Control and monitor your Go VV bike with our intuitive mobile application
@@ -150,10 +150,10 @@ const Technology = () => {
             </div>
             
             <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-go-green text-go-black px-8 py-3 rounded-full font-semibold hover:bg-go-green-dark transition-colors flex items-center justify-center">
+              <button className="bg-go-blue text-white px-8 py-3 rounded-full font-semibold hover:bg-go-blue-dark transition-colors flex items-center justify-center">
                 Download for iOS
               </button>
-              <button className="border-2 border-go-green text-go-green px-8 py-3 rounded-full font-semibold hover:bg-go-green hover:text-go-black transition-colors flex items-center justify-center">
+              <button className="border-2 border-go-blue text-go-blue px-8 py-3 rounded-full font-semibold hover:bg-go-blue hover:text-white transition-colors flex items-center justify-center">
                 Download for Android
               </button>
             </div>
