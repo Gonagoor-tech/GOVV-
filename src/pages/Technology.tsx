@@ -1,167 +1,272 @@
+import React from "react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
-const Technology = () => {
-  const technologies = [
+export const Technology = (): JSX.Element => {
+  // Navigation menu items - left side
+  const leftNavItems = [
+    { text: "Home" },
+    { text: "Our Bikes" },
+    { text: "Technology" },
+  ];
+
+  // Navigation menu items - right side
+  const rightNavItems = [
+    { text: "About" },
+    { text: "Blog" },
+    { text: "Customize" },
+  ];
+
+  // Technology features data
+  const features = [
     {
-      title: 'Smart Battery System',
-      description: 'Removable Li-ion battery pack with advanced BMS for optimal performance and safety.',
-      features: ['Quick Release Mechanism', 'Smart Charging', 'Temperature Management', 'Long Lifespan'],
-      image: 'https://images.unsplash.com/photo-1609285807019-b5fc3c6e8155?w=600&h=400&fit=crop'
+      title: "Swappable Battery Pack",
+      description: "Revolutionary hot-swappable battery system that lets you change batteries in seconds. Never worry about running out of power again.",
+      specs: [
+        "Hot-swappable in under 30 seconds",
+        "Lithium-ion cells with 1000+ cycles",
+        "Smart battery management system",
+        "Compatible across all Go VV models"
+      ]
     },
     {
-      title: 'Efficient Motor',
-      description: '250W brushless hub motor delivering smooth, silent, and powerful performance.',
-      features: ['Brushless Design', 'Low Maintenance', 'High Efficiency', 'Silent Operation'],
-      image: 'https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=600&h=400&fit=crop'
+      title: "Smart Lock & GPS Tracking",
+      description: "Advanced security system with real-time GPS tracking and smartphone-controlled smart lock for ultimate peace of mind.",
+      specs: [
+        "Real-time GPS location tracking",
+        "Smartphone app integration",
+        "Anti-theft alarm system",
+        "Geofencing alerts"
+      ]
     },
     {
-      title: 'IoT Connectivity',
-      description: 'Stay connected with our advanced IoT features and mobile app integration.',
-      features: ['GPS Tracking', 'Anti-theft Alarm', 'Ride Analytics', 'Remote Diagnostics'],
-      image: 'https://images.unsplash.com/photo-1487887235947-a955ef187fcc?w=600&h=400&fit=crop'
+      title: "Companion Mobile App",
+      description: "Control and monitor your Go VV bike with our intuitive mobile app. Track rides, find charging stations, and customize settings.",
+      specs: [
+        "Ride tracking and analytics",
+        "Battery level monitoring",
+        "Route planning and navigation",
+        "Performance optimization"
+      ]
     },
     {
-      title: 'Lightweight Frame',
-      description: 'Aircraft-grade aluminum alloy frame combining strength with minimal weight.',
-      features: ['Corrosion Resistant', 'Lightweight Design', 'High Strength', 'Modern Geometry'],
-      image: 'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=600&h=400&fit=crop'
+      title: "Regenerative Braking",
+      description: "Intelligent braking system that captures energy while slowing down, extending your range and improving efficiency.",
+      specs: [
+        "Energy recovery on braking",
+        "Extended battery range",
+        "Smooth and responsive feel",
+        "Automatic optimization"
+      ]
     },
     {
-      title: 'Advanced Braking',
-      description: 'Dual disc brake system with optional regenerative braking for enhanced safety.',
-      features: ['Disc Brakes', 'Regenerative System', 'All-Weather Performance', 'Easy Maintenance'],
-      image: 'https://images.unsplash.com/photo-1502744688674-c619d1586c9e?w=600&h=400&fit=crop'
+      title: "Frame & Suspension Design",
+      description: "Aerospace-grade aluminum frame with advanced suspension system for the perfect balance of strength, weight, and comfort.",
+      specs: [
+        "Lightweight aluminum alloy frame",
+        "Advanced front suspension",
+        "Aerodynamic design",
+        "Weather-resistant coating"
+      ]
+    },
+    {
+      title: "Modular Design",
+      description: "Innovative modular architecture allows for easy upgrades and maintenance, keeping your bike future-ready.",
+      specs: [
+        "Easily replaceable components",
+        "Upgrade-friendly design",
+        "Tool-free maintenance",
+        "Future-proof architecture"
+      ]
     }
   ];
 
+  // Technical specifications
+  const techSpecs = [
+    {
+      category: "Motor System",
+      specs: [
+        { label: "Type", value: "Brushless DC Motor" },
+        { label: "Power", value: "250W - 750W" },
+        { label: "Torque", value: "Up to 50 Nm" },
+        { label: "Efficiency", value: "85%+" }
+      ]
+    },
+    {
+      category: "Battery Technology",
+      specs: [
+        { label: "Type", value: "Lithium-ion" },
+        { label: "Capacity", value: "36V - 48V" },
+        { label: "Range", value: "60-100 km" },
+        { label: "Cycles", value: "1000+" }
+      ]
+    },
+    {
+      category: "Smart Features",
+      specs: [
+        { label: "Connectivity", value: "Bluetooth 5.0" },
+        { label: "GPS", value: "Built-in tracking" },
+        { label: "Display", value: "LCD/LED" },
+        { label: "App", value: "iOS & Android" }
+      ]
+    }
+  ];
+
+  // Innovation timeline
+  const timeline = [
+    { year: "2023", title: "Go VV Founded", description: "Started with a vision to revolutionize urban mobility in India" },
+    { year: "2023", title: "Battery Innovation", description: "Developed our first swappable battery system" },
+    { year: "2024", title: "Smart Integration", description: "Launched companion app with GPS tracking" },
+    { year: "2024", title: "AI Optimization", description: "Introduced AI-powered ride optimization" },
+    { year: "2025", title: "Future Ready", description: "Autonomous features and IoT integration roadmap" }
+  ];
+
+  // Common glass card style
+  const glassCardStyle =
+    "bg-[#ffffff1a] rounded-[23px] border-[none] shadow-[inset_0px_2px_4px_#ffffff7a,inset_0px_-2px_4px_#00000047] backdrop-blur-[5px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(5px)_brightness(100%)]";
+
   return (
-    <div className="min-h-screen pt-16">
-      {/* Header */}
-      <section className="py-20 bg-gradient-to-r from-go-black to-gray-900 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl font-montserrat font-bold mb-6">
-            Advanced <span className="text-go-blue">Technology</span>
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover the cutting-edge technology that powers every Go VV electric bicycle
-          </p>
-        </div>
-      </section>
-
-      {/* Technology Overview */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="text-4xl font-montserrat font-bold mb-6 text-go-black">
-              Innovation at Every <span className="text-go-blue">Level</span>
-            </h2>
-            <p className="text-lg text-gray-600">
-              Our electric bicycles are engineered with the latest technology to provide an unmatched riding experience. 
-              From smart connectivity to efficient power systems, every component is designed for performance and reliability.
-            </p>
-          </div>
-
-          {/* Technology Cards */}
-          <div className="space-y-20">
-            {technologies.map((tech, index) => (
-              <div key={index} className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-12`}>
-                <div className="flex-1">
-                  <img 
-                    src={tech.image} 
-                    alt={tech.title}
-                    className="w-full h-80 object-cover rounded-2xl shadow-lg hover-scale"
-                  />
-                </div>
-                
-                <div className="flex-1 space-y-6">
-                  <h3 className="text-3xl font-montserrat font-bold text-go-black">{tech.title}</h3>
-                  <p className="text-lg text-gray-600">{tech.description}</p>
-                  
-                  <div className="grid grid-cols-2 gap-4">
-                    {tech.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center">
-                        <div className="w-2 h-2 bg-go-blue rounded-full mr-3"></div>
-                        <span className="text-gray-700">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Tech Specs */}
-      <section className="py-20 bg-gray-100">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-montserrat font-bold text-center mb-16 text-go-black">
-            Technical <span className="text-go-blue">Specifications</span>
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              { category: 'Motor', specs: ['250W Brushless Hub Motor', 'Max Torque: 35 Nm', 'Efficiency: >85%', 'Noise Level: <45dB'] },
-              { category: 'Battery', specs: ['Li-ion 48V 15Ah', 'Range: Up to 100km', 'Charging: 6-7 hours', 'Lifecycle: 800+ cycles'] },
-              { category: 'Frame', specs: ['Aluminum Alloy 6061', 'Weight: 18-22kg', 'Size: Multiple options', 'Warranty: 2 years'] },
-              { category: 'Connectivity', specs: ['GPS Tracking', 'Bluetooth 5.0', '4G LTE Module', 'Mobile App Control'] },
-              { category: 'Safety', specs: ['LED Lighting System', 'Disc Brakes', 'Anti-theft Alarm', 'Reflective Elements'] },
-              { category: 'Display', specs: ['LCD Color Display', 'Speed & Distance', 'Battery Level', 'Navigation Assistance'] }
-            ].map((item, index) => (
-              <div key={index} className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
-                <h3 className="text-xl font-montserrat font-bold mb-4 text-go-blue">{item.category}</h3>
-                <ul className="space-y-2">
-                  {item.specs.map((spec, specIndex) => (
-                    <li key={specIndex} className="text-gray-600 flex items-start">
-                      <span className="text-go-blue mr-2">•</span>
-                      {spec}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Mobile App Section */}
-      <section className="py-20 bg-go-black text-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-montserrat font-bold mb-6">
-              Smart <span className="text-go-blue">Mobile App</span>
-            </h2>
-            <p className="text-xl text-gray-300 mb-12">
-              Control and monitor your Go VV bike with our intuitive mobile application
-            </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[
-                { icon: '📱', title: 'Remote Control', desc: 'Lock/unlock your bike remotely' },
-                { icon: '📍', title: 'GPS Tracking', desc: 'Real-time location tracking' },
-                { icon: '📊', title: 'Ride Analytics', desc: 'Track your rides and performance' },
-                { icon: '🔧', title: 'Diagnostics', desc: 'Monitor bike health and maintenance' }
-              ].map((app, index) => (
-                <div key={index} className="text-center p-6 rounded-2xl bg-gray-900 hover:bg-gray-800 transition-colors">
-                  <div className="text-4xl mb-4">{app.icon}</div>
-                  <h3 className="text-lg font-semibold mb-2">{app.title}</h3>
-                  <p className="text-gray-400 text-sm">{app.desc}</p>
+    <div className="bg-[#bebebe] min-h-screen w-full">
+      <div className="bg-[#bebebe] w-full max-w-[1440px] mx-auto relative">
+        {/* Navigation Menu */}
+        <div className="absolute top-[31px] left-0 w-full px-[53px] z-20">
+          <div className="flex items-center justify-between w-full">
+            {/* Left Navigation */}
+            <div className="flex gap-3">
+              {leftNavItems.map((item, index) => (
+                <div
+                  key={index}
+                  className={`${glassCardStyle} w-[120px] h-[50px] flex items-center justify-center [font-family:'Poppins',Helvetica] font-bold text-black text-lg cursor-pointer hover:scale-105 transition-transform ${item.text === 'Technology' ? 'bg-[#b5d33c] text-white' : ''}`}
+                >
+                  {item.text}
                 </div>
               ))}
             </div>
-            
-            <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-go-blue text-white px-8 py-3 rounded-full font-semibold hover:bg-go-blue-dark transition-colors flex items-center justify-center">
-                Download for iOS
-              </button>
-              <button className="border-2 border-go-blue text-go-blue px-8 py-3 rounded-full font-semibold hover:bg-go-blue hover:text-white transition-colors flex items-center justify-center">
-                Download for Android
-              </button>
+
+            {/* Center Logo */}
+            <div className={`${glassCardStyle} w-[200px] h-[60px] flex items-center justify-center`}>
+              <div className="[font-family:'Poppins',Helvetica] font-bold text-black text-2xl">
+                E-BIKE
+              </div>
+            </div>
+
+            {/* Right Navigation */}
+            <div className="flex gap-3">
+              {rightNavItems.map((item, index) => (
+                <div
+                  key={index}
+                  className={`${glassCardStyle} w-[120px] h-[50px] flex items-center justify-center [font-family:'Poppins',Helvetica] font-bold text-black text-lg cursor-pointer hover:scale-105 transition-transform`}
+                >
+                  {item.text}
+                </div>
+              ))}
             </div>
           </div>
         </div>
-      </section>
+
+        {/* Main Content */}
+        <div className="pt-[120px] px-[53px] pb-[60px]">
+          {/* Header Section */}
+          <div className="text-center mb-12">
+            <h1 className="[font-family:'Poppins',Helvetica] font-bold text-[#b5d33c] text-5xl mb-4">
+              Advanced Technology
+            </h1>
+            <p className="[font-family:'Poppins',Helvetica] font-medium text-black text-xl max-w-4xl mx-auto">
+              Cutting-edge innovations that make Go VV bikes the smartest choice for modern urban mobility
+            </p>
+          </div>
+
+          {/* Features Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {features.map((feature, index) => (
+              <Card key={index} className={`${glassCardStyle} p-6 hover:scale-105 transition-transform`}>
+                <CardHeader>
+                  <CardTitle className="[font-family:'Poppins',Helvetica] font-bold text-black text-xl mb-3">
+                    {feature.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="p-0">
+                  <p className="[font-family:'Poppins',Helvetica] font-medium text-gray-700 mb-4">
+                    {feature.description}
+                  </p>
+                  <ul className="space-y-2">
+                    {feature.specs.map((spec, specIndex) => (
+                      <li key={specIndex} className="[font-family:'Poppins',Helvetica] font-medium text-sm text-gray-600 flex items-center">
+                        <span className="w-2 h-2 bg-[#b5d33c] rounded-full mr-3"></span>
+                        {spec}
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          {/* Technical Specifications */}
+          <div className="mb-16">
+            <h2 className="[font-family:'Poppins',Helvetica] font-bold text-black text-3xl text-center mb-8">
+              Technical Specifications
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {techSpecs.map((category, index) => (
+                <Card key={index} className={`${glassCardStyle} p-6`}>
+                  <CardHeader>
+                    <CardTitle className="[font-family:'Poppins',Helvetica] font-bold text-[#b5d33c] text-xl mb-4">
+                      {category.category}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="p-0">
+                    <div className="space-y-3">
+                      {category.specs.map((spec, specIndex) => (
+                        <div key={specIndex} className="flex justify-between items-center">
+                          <span className="[font-family:'Poppins',Helvetica] font-medium text-gray-700">
+                            {spec.label}:
+                          </span>
+                          <span className="[font-family:'Poppins',Helvetica] font-bold text-black">
+                            {spec.value}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          {/* Innovation Timeline */}
+          <div>
+            <h2 className="[font-family:'Poppins',Helvetica] font-bold text-black text-3xl text-center mb-8">
+              Innovation Timeline
+            </h2>
+            <div className="relative">
+              {/* Timeline line */}
+              <div className="absolute left-1/2 transform -translate-x-0.5 w-1 h-full bg-[#b5d33c]"></div>
+              
+              <div className="space-y-8">
+                {timeline.map((item, index) => (
+                  <div key={index} className={`flex items-center ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
+                    <div className={`${glassCardStyle} p-6 w-96 ${index % 2 === 0 ? 'mr-8' : 'ml-8'}`}>
+                      <div className="flex items-center mb-3">
+                        <div className="w-12 h-12 bg-[#b5d33c] rounded-full flex items-center justify-center mr-4">
+                          <span className="[font-family:'Poppins',Helvetica] font-bold text-white text-sm">
+                            {item.year}
+                          </span>
+                        </div>
+                        <h3 className="[font-family:'Poppins',Helvetica] font-bold text-black text-lg">
+                          {item.title}
+                        </h3>
+                      </div>
+                      <p className="[font-family:'Poppins',Helvetica] font-medium text-gray-700">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
-
-export default Technology;

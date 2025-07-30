@@ -1,224 +1,316 @@
+import React from "react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
-const About = () => {
+export const About = (): JSX.Element => {
+  // Navigation menu items - left side
+  const leftNavItems = [
+    { text: "Home" },
+    { text: "Our Bikes" },
+    { text: "Technology" },
+  ];
+
+  // Navigation menu items - right side
+  const rightNavItems = [
+    { text: "About" },
+    { text: "Blog" },
+    { text: "Customize" },
+  ];
+
+  // Our values data
+  const values = [
+    {
+      title: "Innovation",
+      description: "Pushing the boundaries of electric mobility with cutting-edge technology"
+    },
+    {
+      title: "Sustainability",
+      description: "Committed to creating eco-friendly solutions for a cleaner future"
+    },
+    {
+      title: "Community",
+      description: "Building a community of conscious riders transforming urban mobility"
+    },
+    {
+      title: "Quality",
+      description: "Uncompromising quality in design, manufacturing, and customer service"
+    }
+  ];
+
+  // Journey timeline
+  const journey = [
+    {
+      quarter: "2023 Q1",
+      title: "The Vision",
+      description: "Go VV was conceived with a simple yet powerful vision: to revolutionize urban mobility in India through smart, sustainable electric bicycles."
+    },
+    {
+      quarter: "2023 Q2",
+      title: "Research & Development",
+      description: "Our team of engineers and designers began intensive R&D, studying urban commuting patterns and developing our first prototypes."
+    },
+    {
+      quarter: "2023 Q3",
+      title: "First Prototype",
+      description: "Successfully developed our first working prototype with swappable battery technology and basic smart features."
+    },
+    {
+      quarter: "2024 Q1",
+      title: "Smart Integration",
+      description: "Launched our companion mobile app with GPS tracking, ride analytics, and remote bike control features."
+    },
+    {
+      quarter: "2024 Q2",
+      title: "Production Ready",
+      description: "Finalized our production line and began manufacturing our first commercial models: Lite, Urban, and Plus."
+    },
+    {
+      quarter: "2024 Q4",
+      title: "Market Launch",
+      description: "Officially launched Go VV bikes in the Indian market with overwhelmingly positive response from early adopters."
+    }
+  ];
+
+  // Team members
+  const team = [
+    {
+      initials: "AS",
+      name: "Arjun Sharma",
+      role: "CEO & Co-Founder",
+      description: "Former Tesla engineer with 8+ years in electric vehicle technology"
+    },
+    {
+      initials: "PP",
+      name: "Priya Patel",
+      role: "CTO & Co-Founder",
+      description: "Ex-Google software architect specializing in IoT and mobile applications"
+    },
+    {
+      initials: "RK",
+      name: "Ravi Kumar",
+      role: "Head of Design",
+      description: "Award-winning industrial designer with expertise in sustainable mobility"
+    },
+    {
+      initials: "DMS",
+      name: "Dr. Meera Singh",
+      role: "Head of R&D",
+      description: "PhD in Battery Technology from IIT Delhi, 10+ years in energy storage"
+    }
+  ];
+
+  // Statistics
+  const stats = [
+    { number: "500+", label: "Happy Customers" },
+    { number: "50k+", label: "Km Traveled" },
+    { number: "25+", label: "Service Centers" },
+    { number: "99%", label: "Satisfaction Rate" }
+  ];
+
+  // Common glass card style
+  const glassCardStyle =
+    "bg-[#ffffff1a] rounded-[23px] border-[none] shadow-[inset_0px_2px_4px_#ffffff7a,inset_0px_-2px_4px_#00000047] backdrop-blur-[5px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(5px)_brightness(100%)]";
+
   return (
-    <div className="min-h-screen pt-16">
-      {/* Header */}
-      <section className="py-20 bg-gradient-to-r from-go-black to-gray-900 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl font-montserrat font-bold mb-6">
-            About <span className="text-go-blue">Go VV</span>
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Pioneering India's electric mobility revolution with innovative, sustainable, and smart transportation solutions
-          </p>
-        </div>
-      </section>
-
-      {/* Mission & Vision */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <img 
-                src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&h=600&fit=crop" 
-                alt="Mission"
-                className="w-full h-96 object-cover rounded-2xl shadow-lg"
-              />
+    <div className="bg-[#bebebe] min-h-screen w-full">
+      <div className="bg-[#bebebe] w-full max-w-[1440px] mx-auto relative">
+        {/* Navigation Menu */}
+        <div className="absolute top-[31px] left-0 w-full px-[53px] z-20">
+          <div className="flex items-center justify-between w-full">
+            {/* Left Navigation */}
+            <div className="flex gap-3">
+              {leftNavItems.map((item, index) => (
+                <div
+                  key={index}
+                  className={`${glassCardStyle} w-[120px] h-[50px] flex items-center justify-center [font-family:'Poppins',Helvetica] font-bold text-black text-lg cursor-pointer hover:scale-105 transition-transform`}
+                >
+                  {item.text}
+                </div>
+              ))}
             </div>
-            
-            <div className="space-y-8">
-              <div>
-                <h2 className="text-3xl font-montserrat font-bold mb-4 text-go-black">Our Mission</h2>
-                <p className="text-lg text-gray-600">
-                  To revolutionize urban mobility in India by providing premium, eco-friendly electric bicycles 
-                  that combine cutting-edge technology with Indian engineering excellence. We aim to make sustainable 
-                  transportation accessible, smart, and stylish for every Indian commuter.
-                </p>
-              </div>
-              
-              <div>
-                <h2 className="text-3xl font-montserrat font-bold mb-4 text-go-black">Our Vision</h2>
-                <p className="text-lg text-gray-600">
-                  To become India's leading electric bicycle brand by 2030, creating a cleaner, smarter future 
-                  where every urban journey is powered by innovation and sustainability. We envision cities 
-                  where Go VV bikes are the preferred choice for conscious commuters.
-                </p>
+
+            {/* Center Logo */}
+            <div className={`${glassCardStyle} w-[200px] h-[60px] flex items-center justify-center`}>
+              <div className="[font-family:'Poppins',Helvetica] font-bold text-black text-2xl">
+                E-BIKE
               </div>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Brand Story */}
-      <section className="py-20 bg-gray-100">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="text-4xl font-montserrat font-bold mb-6 text-go-black">
-              Our <span className="text-go-blue">Story</span>
-            </h2>
-            <p className="text-lg text-gray-600">
-              Born from the vision of creating India's next-generation e-mobility company
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-6">
-              <h3 className="text-2xl font-montserrat font-bold text-go-black">Building India's E-Mobility Future</h3>
-              <p className="text-gray-600">
-                Go VV was founded in 2023 with a simple yet ambitious goal: to transform how Indians commute in urban areas. 
-                Recognizing the growing need for sustainable transportation solutions in India's rapidly expanding cities, 
-                our team of engineers and designers set out to create electric bicycles that would meet the unique needs of Indian riders.
-              </p>
-              <p className="text-gray-600">
-                Our journey began in Bengaluru, India's Silicon Valley, where we assembled a team of passionate engineers, 
-                designers, and mobility experts. Drawing inspiration from global best practices while keeping Indian roads, 
-                weather, and riding conditions at the center of our design philosophy.
-              </p>
-              <p className="text-gray-600">
-                Today, Go VV stands as a testament to Indian innovation, combining advanced technology with practical design 
-                to create electric bicycles that are not just modes of transport, but companions for the modern Indian commuter.
-              </p>
-            </div>
-            
-            <div>
-              <img 
-                src="https://images.unsplash.com/photo-1472396961693-142e6e269027?w=800&h=600&fit=crop" 
-                alt="Story"
-                className="w-full h-96 object-cover rounded-2xl shadow-lg hover-scale"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Timeline */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-montserrat font-bold text-center mb-16 text-go-black">
-            Our <span className="text-go-blue">Journey</span>
-          </h2>
-          
-          <div className="max-w-4xl mx-auto">
-            <div className="relative">
-              {/* Timeline Line */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-go-blue hidden md:block"></div>
-              
-              {[
-                {
-                  year: '2023',
-                  title: 'Company Founded',
-                  description: 'Go VV was established with a vision to revolutionize urban mobility in India.',
-                  side: 'left'
-                },
-                {
-                  year: '2023',
-                  title: 'Product Development',
-                  description: 'Intensive R&D phase focusing on Indian road conditions and user requirements.',
-                  side: 'right'
-                },
-                {
-                  year: '2024',
-                  title: 'Prototype Testing',
-                  description: 'Extensive testing of our first prototypes across different Indian cities.',
-                  side: 'left'
-                },
-                {
-                  year: '2024',
-                  title: 'Pre-Launch Phase',
-                  description: 'Preparing for market launch with our three flagship models.',
-                  side: 'right'
-                }
-              ].map((milestone, index) => (
-                <div key={index} className={`flex items-center mb-12 ${milestone.side === 'right' ? 'md:flex-row-reverse' : ''}`}>
-                  <div className={`w-full md:w-5/12 ${milestone.side === 'right' ? 'md:text-right' : ''}`}>
-                    <div className="bg-gray-50 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
-                      <span className="text-go-blue font-bold text-lg">{milestone.year}</span>
-                      <h3 className="text-xl font-montserrat font-bold mb-2 text-go-black">{milestone.title}</h3>
-                      <p className="text-gray-600">{milestone.description}</p>
-                    </div>
-                  </div>
-                  
-                  {/* Timeline Dot */}
-                  <div className="hidden md:flex w-2/12 justify-center">
-                    <div className="w-4 h-4 bg-go-blue rounded-full border-4 border-white shadow-lg"></div>
-                  </div>
-                  
-                  <div className="hidden md:block w-5/12"></div>
+            {/* Right Navigation */}
+            <div className="flex gap-3">
+              {rightNavItems.map((item, index) => (
+                <div
+                  key={index}
+                  className={`${glassCardStyle} w-[120px] h-[50px] flex items-center justify-center [font-family:'Poppins',Helvetica] font-bold text-black text-lg cursor-pointer hover:scale-105 transition-transform ${item.text === 'About' ? 'bg-[#b5d33c] text-white' : ''}`}
+                >
+                  {item.text}
                 </div>
               ))}
             </div>
           </div>
         </div>
-      </section>
 
-      {/* Team Section */}
-      <section className="py-20 bg-gray-100">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-montserrat font-bold text-center mb-16 text-go-black">
-            Meet Our <span className="text-go-blue">Team</span>
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {[
-              {
-                name: 'Arjun Patel',
-                role: 'Founder & CEO',
-                bio: 'Former automotive engineer with 15+ years in electric vehicle technology.',
-                image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face'
-              },
-              {
-                name: 'Priya Sharma',
-                role: 'CTO',
-                bio: 'IoT and mobility expert, leading our technology and innovation initiatives.',
-                image: 'https://images.unsplash.com/photo-1494790108755-2616b84b4e4b?w=400&h=400&fit=crop&crop=face'
-              },
-              {
-                name: 'Rahul Kumar',
-                role: 'Head of Design',
-                bio: 'Award-winning designer focused on creating beautiful and functional products.',
-                image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face'
-              }
-            ].map((member, index) => (
-              <div key={index} className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 text-center hover-scale">
-                <img 
-                  src={member.image} 
-                  alt={member.name}
-                  className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
-                />
-                <h3 className="text-xl font-montserrat font-bold mb-2 text-go-black">{member.name}</h3>
-                <p className="text-go-blue font-semibold mb-3">{member.role}</p>
-                <p className="text-gray-600 text-sm">{member.bio}</p>
-              </div>
-            ))}
+        {/* Main Content */}
+        <div className="pt-[120px] px-[53px] pb-[60px]">
+          {/* Header Section */}
+          <div className="text-center mb-12">
+            <h1 className="[font-family:'Poppins',Helvetica] font-bold text-[#b5d33c] text-5xl mb-4">
+              About Go VV
+            </h1>
+            <p className="[font-family:'Poppins',Helvetica] font-medium text-black text-xl max-w-4xl mx-auto">
+              Pioneering the future of urban mobility in India with smart, sustainable electric bicycles
+            </p>
+          </div>
+
+          {/* Mission & Vision */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            <Card className={`${glassCardStyle} p-8`}>
+              <CardHeader>
+                <CardTitle className="[font-family:'Poppins',Helvetica] font-bold text-[#b5d33c] text-2xl mb-4">
+                  Our Mission
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="p-0">
+                <p className="[font-family:'Poppins',Helvetica] font-medium text-gray-700 mb-4">
+                  To revolutionize urban transportation in India by creating smart, sustainable, and affordable electric bicycles that empower people to go further, go freely, and contribute to a cleaner environment.
+                </p>
+                <p className="[font-family:'Poppins',Helvetica] font-medium text-gray-700">
+                  We believe that the future of urban mobility lies in intelligent, eco-friendly solutions that seamlessly integrate with modern lifestyles while reducing our carbon footprint.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className={`${glassCardStyle} p-8`}>
+              <CardHeader>
+                <CardTitle className="[font-family:'Poppins',Helvetica] font-bold text-[#b5d33c] text-2xl mb-4">
+                  Our Vision
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="p-0">
+                <p className="[font-family:'Poppins',Helvetica] font-medium text-gray-700 mb-4">
+                  To become India's leading electric mobility brand, transforming cities into cleaner, more liveable spaces where smart transportation solutions enable people to lead healthier, more connected lives.
+                </p>
+                <p className="[font-family:'Poppins',Helvetica] font-medium text-gray-700">
+                  We envision a future where every urban commuter has access to intelligent, sustainable transportation that adapts to their needs and contributes to building smarter cities.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Our Values */}
+          <div className="mb-16">
+            <h2 className="[font-family:'Poppins',Helvetica] font-bold text-black text-3xl text-center mb-8">
+              Our Values
+            </h2>
+            <p className="[font-family:'Poppins',Helvetica] font-medium text-gray-700 text-center mb-8">
+              The principles that drive everything we do
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {values.map((value, index) => (
+                <Card key={index} className={`${glassCardStyle} p-6 text-center hover:scale-105 transition-transform`}>
+                  <CardHeader>
+                    <CardTitle className="[font-family:'Poppins',Helvetica] font-bold text-[#b5d33c] text-xl mb-3">
+                      {value.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="p-0">
+                    <p className="[font-family:'Poppins',Helvetica] font-medium text-gray-700">
+                      {value.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          {/* Our Journey */}
+          <div className="mb-16">
+            <h2 className="[font-family:'Poppins',Helvetica] font-bold text-black text-3xl text-center mb-8">
+              Our Journey
+            </h2>
+            <p className="[font-family:'Poppins',Helvetica] font-medium text-gray-700 text-center mb-8">
+              From vision to reality - the Go VV story
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {journey.map((item, index) => (
+                <Card key={index} className={`${glassCardStyle} p-6 hover:scale-105 transition-transform`}>
+                  <CardHeader>
+                    <div className="flex items-center mb-3">
+                      <div className="w-16 h-8 bg-[#b5d33c] rounded-full flex items-center justify-center mr-3">
+                        <span className="[font-family:'Poppins',Helvetica] font-bold text-white text-xs">
+                          {item.quarter}
+                        </span>
+                      </div>
+                    </div>
+                    <CardTitle className="[font-family:'Poppins',Helvetica] font-bold text-black text-lg mb-3">
+                      {item.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="p-0">
+                    <p className="[font-family:'Poppins',Helvetica] font-medium text-gray-700">
+                      {item.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          {/* Our Team */}
+          <div className="mb-16">
+            <h2 className="[font-family:'Poppins',Helvetica] font-bold text-black text-3xl text-center mb-8">
+              Our Team
+            </h2>
+            <p className="[font-family:'Poppins',Helvetica] font-medium text-gray-700 text-center mb-8">
+              Meet the visionaries behind Go VV
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {team.map((member, index) => (
+                <Card key={index} className={`${glassCardStyle} p-6 text-center hover:scale-105 transition-transform`}>
+                  <CardHeader>
+                    <div className="w-20 h-20 bg-[#b5d33c] rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="[font-family:'Poppins',Helvetica] font-bold text-white text-xl">
+                        {member.initials}
+                      </span>
+                    </div>
+                    <CardTitle className="[font-family:'Poppins',Helvetica] font-bold text-black text-lg mb-1">
+                      {member.name}
+                    </CardTitle>
+                    <p className="[font-family:'Poppins',Helvetica] font-semibold text-[#b5d33c] text-sm mb-3">
+                      {member.role}
+                    </p>
+                  </CardHeader>
+                  <CardContent className="p-0">
+                    <p className="[font-family:'Poppins',Helvetica] font-medium text-gray-700 text-sm">
+                      {member.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          {/* Statistics */}
+          <div>
+            <h2 className="[font-family:'Poppins',Helvetica] font-bold text-black text-3xl text-center mb-8">
+              Our Impact
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {stats.map((stat, index) => (
+                <Card key={index} className={`${glassCardStyle} p-6 text-center hover:scale-105 transition-transform`}>
+                  <CardContent className="p-0 flex flex-col items-center">
+                    <div className="[font-family:'Poppins',Helvetica] font-bold text-[#b5d33c] text-4xl mb-2">
+                      {stat.number}
+                    </div>
+                    <div className="[font-family:'Poppins',Helvetica] font-medium text-black text-lg">
+                      {stat.label}
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
-      </section>
-
-      {/* Values */}
-      <section className="py-20 bg-go-black text-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-montserrat font-bold text-center mb-16">
-            Our <span className="text-go-blue">Values</span>
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { icon: '🌱', title: 'Sustainability', desc: 'Committed to eco-friendly transportation solutions' },
-              { icon: '💡', title: 'Innovation', desc: 'Continuous innovation in electric mobility technology' },
-              { icon: '🏆', title: 'Quality', desc: 'Uncompromising quality in every product we create' },
-              { icon: '🤝', title: 'Community', desc: 'Building a community of conscious commuters' }
-            ].map((value, index) => (
-              <div key={index} className="text-center p-6 rounded-2xl bg-gray-900 hover:bg-gray-800 transition-colors">
-                <div className="text-4xl mb-4">{value.icon}</div>
-                <h3 className="text-xl font-montserrat font-bold mb-3 text-go-blue">{value.title}</h3>
-                <p className="text-gray-300">{value.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      </div>
     </div>
   );
 };
-
-export default About;
