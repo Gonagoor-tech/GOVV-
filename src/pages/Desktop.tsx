@@ -551,9 +551,9 @@ export const Desktop = (): JSX.Element => {
 
           {/* Mission & Vision */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-12 md:mb-16">
-            <Card className={`${glassCardStyle} p-8`}>
+            <Card className={`${glassCardStyle} p-4 md:p-8`}>
               <CardHeader>
-                <CardTitle className="[font-family:'Poppins',Helvetica] font-bold text-[#b5d33c] text-2xl mb-4">
+                <CardTitle className="[font-family:'Poppins',Helvetica] font-bold text-[#b5d33c] text-xl md:text-2xl mb-4">
                   Our Mission
                 </CardTitle>
               </CardHeader>
@@ -567,9 +567,9 @@ export const Desktop = (): JSX.Element => {
               </CardContent>
             </Card>
 
-            <Card className={`${glassCardStyle} p-8`}>
+            <Card className={`${glassCardStyle} p-4 md:p-8`}>
               <CardHeader>
-                <CardTitle className="[font-family:'Poppins',Helvetica] font-bold text-[#b5d33c] text-2xl mb-4">
+                <CardTitle className="[font-family:'Poppins',Helvetica] font-bold text-[#b5d33c] text-xl md:text-2xl mb-4">
                   Our Vision
                 </CardTitle>
               </CardHeader>
@@ -585,15 +585,15 @@ export const Desktop = (): JSX.Element => {
           </div>
 
           {/* Our Values */}
-          <div className="mb-16">
-            <h3 className="[font-family:'Poppins',Helvetica] font-bold text-black text-3xl text-center mb-8">
+          <div className="mb-12 md:mb-16">
+            <h3 className="[font-family:'Poppins',Helvetica] font-bold text-black text-2xl md:text-3xl text-center mb-6 md:mb-8">
               Our Values
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
               {values.map((value, index) => (
-                <Card key={index} className={`${glassCardStyle} p-6 text-center hover:scale-105 transition-transform`}>
+                <Card key={index} className={`${glassCardStyle} p-4 md:p-6 text-center hover:scale-105 transition-transform`}>
                   <CardHeader>
-                    <CardTitle className="[font-family:'Poppins',Helvetica] font-bold text-[#b5d33c] text-xl mb-3">
+                    <CardTitle className="[font-family:'Poppins',Helvetica] font-bold text-[#b5d33c] text-lg md:text-xl mb-3">
                       {value.title}
                     </CardTitle>
                   </CardHeader>
@@ -612,19 +612,19 @@ export const Desktop = (): JSX.Element => {
             <h3 className="[font-family:'Poppins',Helvetica] font-bold text-black text-2xl md:text-3xl text-center mb-6 md:mb-8">
               Our Team
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
               {team.map((member, index) => (
-                <Card key={index} className={`${glassCardStyle} p-6 text-center hover:scale-105 transition-transform`}>
+                <Card key={index} className={`${glassCardStyle} p-4 md:p-6 text-center hover:scale-105 transition-transform`}>
                   <CardHeader>
-                    <div className="w-20 h-20 bg-[#b5d33c] rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="[font-family:'Poppins',Helvetica] font-bold text-white text-xl">
+                    <div className="w-16 md:w-20 h-16 md:h-20 bg-[#b5d33c] rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="[font-family:'Poppins',Helvetica] font-bold text-white text-lg md:text-xl">
                         {member.initials}
                       </span>
                     </div>
-                    <CardTitle className="[font-family:'Poppins',Helvetica] font-bold text-black text-lg mb-1">
+                    <CardTitle className="[font-family:'Poppins',Helvetica] font-bold text-black text-base md:text-lg mb-1">
                       {member.name}
                     </CardTitle>
-                    <p className="[font-family:'Poppins',Helvetica] font-semibold text-[#b5d33c] text-sm mb-3">
+                    <p className="[font-family:'Poppins',Helvetica] font-semibold text-[#b5d33c] text-xs md:text-sm mb-3">
                       {member.role}
                     </p>
                   </CardHeader>
@@ -645,12 +645,12 @@ export const Desktop = (): JSX.Element => {
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
               {stats.map((stat, index) => (
-                <Card key={index} className={`${glassCardStyle} p-6 text-center hover:scale-105 transition-transform`}>
+                <Card key={index} className={`${glassCardStyle} p-4 md:p-6 text-center hover:scale-105 transition-transform`}>
                   <CardContent className="p-0 flex flex-col items-center">
-                    <div className="[font-family:'Poppins',Helvetica] font-bold text-[#b5d33c] text-4xl mb-2">
+                    <div className="[font-family:'Poppins',Helvetica] font-bold text-[#b5d33c] text-2xl md:text-4xl mb-2">
                       {stat.number}
                     </div>
-                    <div className="[font-family:'Poppins',Helvetica] font-medium text-black text-lg">
+                    <div className="[font-family:'Poppins',Helvetica] font-medium text-black text-sm md:text-lg">
                       {stat.label}
                     </div>
                   </CardContent>
@@ -694,17 +694,17 @@ export const Desktop = (): JSX.Element => {
                   readTime: "6 min read"
                 }
               ].map((post, index) => (
-                <Card key={index} className={`${glassCardStyle} p-6 hover:scale-105 transition-transform cursor-pointer`}>
+                <Card key={index} className={`${glassCardStyle} p-4 md:p-6 hover:scale-105 transition-transform cursor-pointer`}>
                   <CardHeader>
                     <div className="flex justify-between items-start mb-2">
-                      <span className="[font-family:'Poppins',Helvetica] font-medium text-[#b5d33c] text-sm">
+                      <span className="[font-family:'Poppins',Helvetica] font-medium text-[#b5d33c] text-xs md:text-sm">
                         {post.date}
                       </span>
-                      <span className="[font-family:'Poppins',Helvetica] font-medium text-gray-600 text-sm">
+                      <span className="[font-family:'Poppins',Helvetica] font-medium text-gray-600 text-xs md:text-sm">
                         {post.readTime}
                       </span>
                     </div>
-                    <CardTitle className="[font-family:'Poppins',Helvetica] font-bold text-black text-xl mb-3">
+                    <CardTitle className="[font-family:'Poppins',Helvetica] font-bold text-black text-lg md:text-xl mb-3">
                       {post.title}
                     </CardTitle>
                   </CardHeader>
@@ -736,15 +736,15 @@ export const Desktop = (): JSX.Element => {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
               {/* Customization Options */}
-              <div className="space-y-8">
-                <Card className={`${glassCardStyle} p-6`}>
+              <div className="space-y-6 md:space-y-8">
+                <Card className={`${glassCardStyle} p-4 md:p-6`}>
                   <CardHeader>
-                    <CardTitle className="[font-family:'Poppins',Helvetica] font-bold text-black text-2xl mb-4">
+                    <CardTitle className="[font-family:'Poppins',Helvetica] font-bold text-black text-xl md:text-2xl mb-4">
                       Color Options
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="p-0">
-                    <div className="grid grid-cols-4 gap-4 mb-4">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mb-4">
                       {[
                         { name: "Lime Green", color: "#b5d33c" },
                         { name: "Ocean Blue", color: "#2563eb" },
@@ -753,10 +753,10 @@ export const Desktop = (): JSX.Element => {
                       ].map((color, index) => (
                         <div key={index} className="text-center">
                           <div 
-                            className="w-12 h-12 rounded-full mx-auto mb-2 border-2 border-gray-300 cursor-pointer hover:scale-110 transition-transform"
+                            className="w-10 md:w-12 h-10 md:h-12 rounded-full mx-auto mb-2 border-2 border-gray-300 cursor-pointer hover:scale-110 transition-transform"
                             style={{ backgroundColor: color.color }}
                           ></div>
-                          <span className="[font-family:'Poppins',Helvetica] font-medium text-black text-sm">
+                          <span className="[font-family:'Poppins',Helvetica] font-medium text-black text-xs md:text-sm">
                             {color.name}
                           </span>
                         </div>
@@ -765,9 +765,9 @@ export const Desktop = (): JSX.Element => {
                   </CardContent>
                 </Card>
 
-                <Card className={`${glassCardStyle} p-6`}>
+                <Card className={`${glassCardStyle} p-4 md:p-6`}>
                   <CardHeader>
-                    <CardTitle className="[font-family:'Poppins',Helvetica] font-bold text-black text-2xl mb-4">
+                    <CardTitle className="[font-family:'Poppins',Helvetica] font-bold text-black text-xl md:text-2xl mb-4">
                       Accessories
                     </CardTitle>
                   </CardHeader>
@@ -781,11 +781,11 @@ export const Desktop = (): JSX.Element => {
                         "Comfort Gel Seat Upgrade",
                         "Extended Battery Pack"
                       ].map((accessory, index) => (
-                        <div key={index} className="flex items-center justify-between p-3 bg-white/10 rounded-lg">
-                          <span className="[font-family:'Poppins',Helvetica] font-medium text-black">
+                        <div key={index} className="flex items-center justify-between p-2 md:p-3 bg-white/10 rounded-lg">
+                          <span className="[font-family:'Poppins',Helvetica] font-medium text-black text-sm md:text-base">
                             {accessory}
                           </span>
-                          <button className="[font-family:'Poppins',Helvetica] font-bold text-[#b5d33c] hover:text-black transition-colors text-sm">
+                          <button className="[font-family:'Poppins',Helvetica] font-bold text-[#b5d33c] hover:text-black transition-colors text-xs md:text-sm">
                             Add +
                           </button>
                         </div>
@@ -797,22 +797,22 @@ export const Desktop = (): JSX.Element => {
 
               {/* Customization Preview */}
               <div className="relative">
-                <Card className={`${glassCardStyle} p-8 text-center`}>
+                <Card className={`${glassCardStyle} p-4 md:p-8 text-center`}>
                   <CardContent className="p-0">
-                    <div className="mb-6">
+                    <div className="mb-4 md:mb-6">
                       <img 
                         src="/figmaAssets/vector-121.svg" 
                         alt="Customizable Bike Preview"
-                        className="w-full max-w-md mx-auto h-auto"
+                        className="w-full max-w-xs md:max-w-md mx-auto h-auto"
                       />
                     </div>
-                    <h3 className="[font-family:'Poppins',Helvetica] font-bold text-black text-2xl mb-4">
+                    <h3 className="[font-family:'Poppins',Helvetica] font-bold text-black text-xl md:text-2xl mb-3 md:mb-4">
                       Your Custom GoVV
                     </h3>
-                    <p className="[font-family:'Poppins',Helvetica] font-medium text-gray-700 mb-6">
+                    <p className="[font-family:'Poppins',Helvetica] font-medium text-gray-700 mb-4 md:mb-6 text-sm md:text-base">
                       Preview your personalized electric bike with selected colors and accessories
                     </p>
-                    <button className={`${glassCardStyle} px-8 py-3 [font-family:'Poppins',Helvetica] font-bold text-black hover:scale-105 transition-transform`}>
+                    <button className={`${glassCardStyle} px-6 md:px-8 py-2 md:py-3 [font-family:'Poppins',Helvetica] font-bold text-black hover:scale-105 transition-transform text-sm md:text-base`}>
                       Start Customizing
                     </button>
                   </CardContent>
@@ -827,17 +827,17 @@ export const Desktop = (): JSX.Element => {
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8 mb-8 md:mb-12">
               {/* Company Info */}
-              <div className="col-span-1 md:col-span-2">
-                <div className="[font-family:'Poppins',Helvetica] font-bold text-black text-3xl mb-4">
+              <div className="col-span-1 md:col-span-2 mb-6 md:mb-0">
+                <div className="[font-family:'Poppins',Helvetica] font-bold text-black text-2xl md:text-3xl mb-4">
                   GoVV E-BIKE
                 </div>
-                <p className="[font-family:'Poppins',Helvetica] font-medium text-gray-700 mb-6 max-w-md">
+                <p className="[font-family:'Poppins',Helvetica] font-medium text-gray-700 mb-4 md:mb-6 max-w-md text-sm md:text-base">
                   Pioneering the future of urban mobility in India with smart, sustainable electric bicycles that empower communities and protect our environment.
                 </p>
-                <div className="flex space-x-4">
+                <div className="flex space-x-3 md:space-x-4">
                   {["Facebook", "Twitter", "Instagram", "LinkedIn"].map((social, index) => (
-                    <div key={index} className={`${glassCardStyle} w-12 h-12 flex items-center justify-center cursor-pointer hover:scale-110 transition-transform`}>
-                      <span className="[font-family:'Poppins',Helvetica] font-bold text-black text-sm">
+                    <div key={index} className={`${glassCardStyle} w-10 md:w-12 h-10 md:h-12 flex items-center justify-center cursor-pointer hover:scale-110 transition-transform`}>
+                      <span className="[font-family:'Poppins',Helvetica] font-bold text-black text-xs md:text-sm">
                         {social[0]}
                       </span>
                     </div>
@@ -846,8 +846,8 @@ export const Desktop = (): JSX.Element => {
               </div>
 
               {/* Quick Links */}
-              <div>
-                <h4 className="[font-family:'Poppins',Helvetica] font-bold text-black text-lg mb-4">
+              <div className="mb-6 md:mb-0">
+                <h4 className="[font-family:'Poppins',Helvetica] font-bold text-black text-base md:text-lg mb-3 md:mb-4">
                   Quick Links
                 </h4>
                 <ul className="space-y-2">
@@ -862,7 +862,7 @@ export const Desktop = (): JSX.Element => {
                     <li key={index}>
                       <a 
                         href={link.href}
-                        className="[font-family:'Poppins',Helvetica] font-medium text-gray-700 hover:text-[#b5d33c] transition-colors"
+                        className="[font-family:'Poppins',Helvetica] font-medium text-gray-700 hover:text-[#b5d33c] transition-colors text-sm md:text-base"
                       >
                         {link.text}
                       </a>
@@ -873,20 +873,20 @@ export const Desktop = (): JSX.Element => {
 
               {/* Contact Info */}
               <div>
-                <h4 className="[font-family:'Poppins',Helvetica] font-bold text-black text-lg mb-4">
+                <h4 className="[font-family:'Poppins',Helvetica] font-bold text-black text-base md:text-lg mb-3 md:mb-4">
                   Contact Us
                 </h4>
-                <div className="space-y-3">
-                  <div className="[font-family:'Poppins',Helvetica] font-medium text-gray-700">
+                <div className="space-y-2 md:space-y-3">
+                  <div className="[font-family:'Poppins',Helvetica] font-medium text-gray-700 text-sm md:text-base">
                     📍 Bangalore, Karnataka, India
                   </div>
-                  <div className="[font-family:'Poppins',Helvetica] font-medium text-gray-700">
+                  <div className="[font-family:'Poppins',Helvetica] font-medium text-gray-700 text-sm md:text-base">
                     📞 +91 98765 43210
                   </div>
-                  <div className="[font-family:'Poppins',Helvetica] font-medium text-gray-700">
+                  <div className="[font-family:'Poppins',Helvetica] font-medium text-gray-700 text-sm md:text-base">
                     ✉️ hello@govv.in
                   </div>
-                  <div className="[font-family:'Poppins',Helvetica] font-medium text-gray-700">
+                  <div className="[font-family:'Poppins',Helvetica] font-medium text-gray-700 text-sm md:text-base">
                     🕒 Mon-Sat 9AM-6PM
                   </div>
                 </div>
@@ -894,16 +894,16 @@ export const Desktop = (): JSX.Element => {
             </div>
 
             {/* Bottom Bar */}
-            <div className="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center">
-              <div className="[font-family:'Poppins',Helvetica] font-medium text-gray-700 mb-4 md:mb-0">
+            <div className="border-t border-white/20 pt-6 md:pt-8 flex flex-col md:flex-row justify-between items-center">
+              <div className="[font-family:'Poppins',Helvetica] font-medium text-gray-700 mb-4 md:mb-0 text-sm md:text-base text-center md:text-left">
                 © 2025 GoVV E-Bike. All rights reserved.
               </div>
-              <div className="flex space-x-6">
+              <div className="flex flex-wrap justify-center md:justify-end space-x-4 md:space-x-6">
                 {["Privacy Policy", "Terms of Service", "Cookie Policy"].map((policy, index) => (
                   <a 
                     key={index}
                     href="#"
-                    className="[font-family:'Poppins',Helvetica] font-medium text-gray-700 hover:text-[#b5d33c] transition-colors"
+                    className="[font-family:'Poppins',Helvetica] font-medium text-gray-700 hover:text-[#b5d33c] transition-colors text-sm md:text-base"
                   >
                     {policy}
                   </a>

@@ -126,61 +126,64 @@ export const Technology = (): JSX.Element => {
 
   return (
     <div className="bg-[#bebebe] min-h-screen w-full">
-      <div className="bg-[#bebebe] w-full max-w-[1440px] mx-auto relative">
+      <div className="bg-[#bebebe] w-full mx-auto relative">
         {/* Navigation Menu */}
-        <div className="absolute top-[31px] left-0 w-full px-[53px] z-20">
-          <div className="flex items-center justify-between w-full">
-            {/* Left Navigation */}
-            <div className="flex gap-3">
-              {leftNavItems.map((item, index) => (
-                <div
-                  key={index}
-                  className={`${glassCardStyle} w-[120px] h-[50px] flex items-center justify-center [font-family:'Poppins',Helvetica] font-bold text-black text-lg cursor-pointer hover:scale-105 transition-transform ${item.text === 'Technology' ? 'bg-[#b5d33c] text-white' : ''}`}
-                >
-                  {item.text}
-                </div>
-              ))}
-            </div>
-
-            {/* Center Logo */}
-            <div className={`${glassCardStyle} w-[200px] h-[60px] flex items-center justify-center`}>
-              <div className="[font-family:'Poppins',Helvetica] font-bold text-black text-2xl">
-                E-BIKE
+        <div className="absolute top-[31px] left-0 w-full px-4 md:px-[53px] z-20">
+          <div className="flex items-center justify-center md:justify-between w-full">
+            {/* Mobile Navigation - Simplified */}
+            <div className="flex flex-wrap gap-2 md:gap-3 justify-center md:justify-between w-full">
+              {/* Left Navigation */}
+              <div className="flex gap-2 md:gap-3 md:mr-auto">
+                {leftNavItems.map((item, index) => (
+                  <div
+                    key={index}
+                    className={`${glassCardStyle} w-[80px] md:w-[120px] h-[40px] md:h-[50px] flex items-center justify-center [font-family:'Poppins',Helvetica] font-bold text-black text-sm md:text-lg cursor-pointer hover:scale-105 transition-transform ${item.text === 'Technology' ? 'bg-[#b5d33c] text-white' : ''}`}
+                  >
+                    {item.text === "Our Bikes" ? "Bikes" : item.text}
+                  </div>
+                ))}
               </div>
-            </div>
 
-            {/* Right Navigation */}
-            <div className="flex gap-3">
-              {rightNavItems.map((item, index) => (
-                <div
-                  key={index}
-                  className={`${glassCardStyle} w-[120px] h-[50px] flex items-center justify-center [font-family:'Poppins',Helvetica] font-bold text-black text-lg cursor-pointer hover:scale-105 transition-transform`}
-                >
-                  {item.text}
+              {/* Center Logo - Hidden on mobile, visible on md+ */}
+              <div className={`hidden md:flex ${glassCardStyle} w-[200px] h-[60px] items-center justify-center`}>
+                <div className="[font-family:'Poppins',Helvetica] font-bold text-black text-2xl">
+                  E-BIKE
                 </div>
-              ))}
+              </div>
+
+              {/* Right Navigation */}
+              <div className="flex gap-2 md:gap-3">
+                {rightNavItems.map((item, index) => (
+                  <div
+                    key={index}
+                    className={`${glassCardStyle} w-[80px] md:w-[120px] h-[40px] md:h-[50px] flex items-center justify-center [font-family:'Poppins',Helvetica] font-bold text-black text-sm md:text-lg cursor-pointer hover:scale-105 transition-transform`}
+                  >
+                    {item.text}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
 
         {/* Main Content */}
-        <div className="pt-[120px] px-[53px] pb-[60px]">
+        <div className="pt-[100px] md:pt-[120px] px-4 md:px-[53px] pb-[60px]">
           {/* Header Section */}
-          <div className="text-center mb-12">
-            <h1 className="[font-family:'Poppins',Helvetica] font-bold text-[#b5d33c] text-5xl mb-4">
+          <div className="text-center mb-8 md:mb-12">
+            <h1 className="[font-family:'Poppins',Helvetica] font-bold text-[#b5d33c] text-3xl md:text-5xl mb-4 px-4">
               Advanced Technology
             </h1>
-            <p className="[font-family:'Poppins',Helvetica] font-medium text-black text-xl max-w-4xl mx-auto">
+            <p className="[font-family:'Poppins',Helvetica] font-medium text-black text-lg md:text-xl max-w-4xl mx-auto px-4">
               Cutting-edge innovations that make Go VV bikes the smartest choice for modern urban mobility
             </p>
           </div>
 
           {/* Features Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 mb-12 md:mb-16">
             {features.map((feature, index) => (
-              <Card key={index} className={`${glassCardStyle} p-6 hover:scale-105 transition-transform`}>
+              <Card key={index} className={`${glassCardStyle} p-4 md:p-6 hover:scale-105 transition-transform`}>
                 <CardHeader>
-                  <CardTitle className="[font-family:'Poppins',Helvetica] font-bold text-black text-xl mb-3">
+                  <CardTitle className="[font-family:'Poppins',Helvetica] font-bold text-black text-lg md:text-xl mb-3">
                     {feature.title}
                   </CardTitle>
                 </CardHeader>
@@ -202,15 +205,15 @@ export const Technology = (): JSX.Element => {
           </div>
 
           {/* Technical Specifications */}
-          <div className="mb-16">
-            <h2 className="[font-family:'Poppins',Helvetica] font-bold text-black text-3xl text-center mb-8">
+          <div className="mb-12 md:mb-16">
+            <h2 className="[font-family:'Poppins',Helvetica] font-bold text-black text-2xl md:text-3xl text-center mb-6 md:mb-8">
               Technical Specifications
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
               {techSpecs.map((category, index) => (
-                <Card key={index} className={`${glassCardStyle} p-6`}>
+                <Card key={index} className={`${glassCardStyle} p-4 md:p-6`}>
                   <CardHeader>
-                    <CardTitle className="[font-family:'Poppins',Helvetica] font-bold text-[#b5d33c] text-xl mb-4">
+                    <CardTitle className="[font-family:'Poppins',Helvetica] font-bold text-[#b5d33c] text-lg md:text-xl mb-4">
                       {category.category}
                     </CardTitle>
                   </CardHeader>
@@ -235,24 +238,24 @@ export const Technology = (): JSX.Element => {
 
           {/* Innovation Timeline */}
           <div>
-            <h2 className="[font-family:'Poppins',Helvetica] font-bold text-black text-3xl text-center mb-8">
+            <h2 className="[font-family:'Poppins',Helvetica] font-bold text-black text-2xl md:text-3xl text-center mb-6 md:mb-8">
               Innovation Timeline
             </h2>
             <div className="relative">
-              {/* Timeline line */}
-              <div className="absolute left-1/2 transform -translate-x-0.5 w-1 h-full bg-[#b5d33c]"></div>
+              {/* Timeline line - hidden on mobile */}
+              <div className="hidden md:block absolute left-1/2 transform -translate-x-0.5 w-1 h-full bg-[#b5d33c]"></div>
               
-              <div className="space-y-8">
+              <div className="space-y-6 md:space-y-8">
                 {timeline.map((item, index) => (
-                  <div key={index} className={`flex items-center ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
-                    <div className={`${glassCardStyle} p-6 w-96 ${index % 2 === 0 ? 'mr-8' : 'ml-8'}`}>
+                  <div key={index} className={`flex items-center ${index % 2 === 0 ? 'md:justify-start' : 'md:justify-end'} justify-center`}>
+                    <div className={`${glassCardStyle} p-4 md:p-6 w-full md:w-96 ${index % 2 === 0 ? 'md:mr-8' : 'md:ml-8'} max-w-sm md:max-w-none`}>
                       <div className="flex items-center mb-3">
-                        <div className="w-12 h-12 bg-[#b5d33c] rounded-full flex items-center justify-center mr-4">
-                          <span className="[font-family:'Poppins',Helvetica] font-bold text-white text-sm">
+                        <div className="w-10 md:w-12 h-10 md:h-12 bg-[#b5d33c] rounded-full flex items-center justify-center mr-3 md:mr-4">
+                          <span className="[font-family:'Poppins',Helvetica] font-bold text-white text-xs md:text-sm">
                             {item.year}
                           </span>
                         </div>
-                        <h3 className="[font-family:'Poppins',Helvetica] font-bold text-black text-lg">
+                        <h3 className="[font-family:'Poppins',Helvetica] font-bold text-black text-base md:text-lg">
                           {item.title}
                         </h3>
                       </div>
