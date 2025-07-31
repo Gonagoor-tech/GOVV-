@@ -227,7 +227,7 @@ export const Desktop = (): JSX.Element => {
               <div className="h-full w-full relative">
                 {/* Navigation Menu - Fixed desktop layout with logo */}
                 <div className="absolute top-[31px] left-[53px] right-[53px] z-20">
-                  <div className="flex items-center justify-between w-full">
+                  <div className="flex items-center justify-between w-full relative">
                     {/* Left Navigation */}
                     <div className="flex gap-3">
                       {leftNavItems.map((item, index) => (
@@ -242,7 +242,7 @@ export const Desktop = (): JSX.Element => {
                     </div>
 
                     {/* Center Logo */}
-                    <div className="absolute left-1/2 transform -translate-x-1/2">
+                    <div className="flex-1 flex justify-center">
                       <img
                         src="/lovable-uploads/b2ca6469-0789-4236-b761-3d74a0c5e4d7.png"
                         alt="GoVV Logo"
