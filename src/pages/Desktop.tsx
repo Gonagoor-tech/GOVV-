@@ -19,43 +19,43 @@ export const Desktop = (): JSX.Element => {
   // Bike specification cards data
   const specCards = [
     {
-      top: "273px",
-      left: "897px",
+      top: "200px",
+      left: "927px",
       icon: "/figmaAssets/image-1.png",
       title: "Range",
       description: "35 - 40Km",
     },
     {
-      top: "273px",
-      left: "1047px",
+      top: "200px",
+      left: "1077px",
       icon: "/figmaAssets/image-2.png",
       title: "Speed",
       description: "25 Km/h",
     },
     {
-      top: "273px",
-      left: "1197px",
+      top: "200px",
+      left: "1227px",
       icon: "/figmaAssets/image-7.png",
       title: "Twist",
       description: "type",
     },
     {
-      top: "434px",
-      left: "897px",
+      top: "350px",
+      left: "927px",
       icon: "/figmaAssets/image-6.png",
       title: "36V, 9ah,",
       description: "Li-ion",
     },
     {
-      top: "434px",
-      left: "1047px",
+      top: "350px",
+      left: "1077px",
       icon: "/figmaAssets/image-4.png",
       title: "5 hours,2 amp,",
       description: "42V",
     },
     {
-      top: "427px",
-      left: "1197px",
+      top: "350px",
+      left: "1227px",
       icon: "/figmaAssets/image-8.png",
       title: "BLDC Motor",
       description: "36V/250W",
@@ -180,25 +180,25 @@ export const Desktop = (): JSX.Element => {
   const team = [
     {
       initials: "AS",
-      name: "Arjun Sharma",
+      name: "",
       role: "CEO & Co-Founder",
       description: "Former Tesla engineer with 8+ years in electric vehicle technology"
     },
     {
       initials: "PP",
-      name: "Priya Patel",
+      name: "",
       role: "CTO & Co-Founder",
       description: "Ex-Google software architect specializing in IoT and mobile applications"
     },
     {
       initials: "RK",
-      name: "Ravi Kumar",
+      name: "",
       role: "Head of Design",
       description: "Award-winning industrial designer with expertise in sustainable mobility"
     },
     {
       initials: "DMS",
-      name: "Dr. Meera Singh",
+      name: "",
       role: "Head of R&D",
       description: "PhD in Battery Technology from IIT Delhi, 10+ years in energy storage"
     }
@@ -241,14 +241,7 @@ export const Desktop = (): JSX.Element => {
                       ))}
                     </div>
 
-                    {/* Center Logo */}
-                    <div className="flex-1 flex justify-center">
-                      <img
-                        src="/lovable-uploads/b2ca6469-0789-4236-b761-3d74a0c5e4d7.png"
-                        alt="GoVV Logo"
-                        className="h-[60px] w-auto"
-                      />
-                    </div>
+                   
 
                     {/* Right Navigation */}
                     <div className="flex gap-3">
@@ -266,14 +259,15 @@ export const Desktop = (): JSX.Element => {
                 </div>
 
                 {/* Background and bike image - Original positioning */}
-                <div className="absolute w-full h-full top-0 left-0 bg-[url(/figmaAssets/vector-5-1.svg)] bg-cover bg-center" />
-                <div className="absolute top-0 left-0 w-full h-full flex items-center justify-start">
-                  <img
-                    className="w-[720px] h-[506px] object-contain ml-0 z-10"
-                    alt="Electric Bike"
-                    src="/figmaAssets/vector-121.svg"
-                  />
-                </div>
+               <div className="absolute w-full h-full top-0 left-0 bg-[url(/figmaAssets/vector-5-1.svg)] bg-cover bg-center" />
+                <div className="absolute top-0 left-0 w-full h-full flex justify-start">
+  <img
+    className="w-[720px] h-[506px] object-contain ml-0 z-[310] mt-[72px]"
+    alt="Electric Bike"
+    src="/figmaAssets/vector-121.svg"
+  />
+</div>
+
 
                 {/* Desktop Specification Cards - Original absolute positioning */}
                 {specCards.map((card, index) => (
@@ -303,31 +297,7 @@ export const Desktop = (): JSX.Element => {
                 ))}
 
                 {/* Decorative elements - Original positioning */}
-                <img
-                  className="absolute w-[85px] h-[134px] top-3 left-[694px] z-5"
-                  alt="Vector"
-                  src="/figmaAssets/vector-1-1.svg"
-                />
-                <img
-                  className="absolute w-14 h-[55px] top-[74px] left-[668px] z-5"
-                  alt="Ellipse"
-                  src="/figmaAssets/ellipse-1.svg"
-                />
-                <img
-                  className="absolute w-[74px] h-[92px] top-[39px] left-[750px] z-5"
-                  alt="Ellipse"
-                  src="/figmaAssets/ellipse-3.svg"
-                />
-                <img
-                  className="absolute w-[57px] h-[65px] top-[11px] left-[666px] z-5"
-                  alt="Ellipse"
-                  src="/figmaAssets/ellipse-4.svg"
-                />
-                <img
-                  className="absolute w-9 h-[41px] top-6 left-[679px] z-5"
-                  alt="Vector"
-                  src="/figmaAssets/vector-2-1.svg"
-                />
+                
               </div>
             </div>
 
@@ -335,7 +305,7 @@ export const Desktop = (): JSX.Element => {
             <div className="absolute w-full bottom-0 left-0">
               <div className="relative">
                 {/* Top curve separator */}
-                <div className="absolute w-full h-[92px] -top-[92px] left-0">
+                <div className="absolute w-full h-[102px] -top-[27px] left-0">
                   <img
                     className="absolute w-full h-full left-0"
                     alt="Vector"
@@ -346,7 +316,8 @@ export const Desktop = (): JSX.Element => {
                 {/* Content section - Original layout */}
                 <div className="w-full bg-[url(/figmaAssets/vector-6-1.svg)] bg-cover bg-center px-[115px] py-16">
                   <div className="text-left mb-8">
-                    <div className="[font-family:'Poppins',Helvetica] font-bold text-white text-2xl mb-4">
+                    <div className="[font-family:'Poppins',Helvetica] font-bold text-white text-4xl mb-4">
+                      
                       MAXIMIZE YOUR PRODUCTIVITY
                     </div>
                     <div className="[font-family:'Poppins',Helvetica] font-bold text-[#b5d33c] text-[50px] mb-6 leading-tight">
