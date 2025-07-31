@@ -241,14 +241,6 @@ export const Desktop = (): JSX.Element => {
                       ))}
                     </div>
 
-                    {/* Center Logo */}
-                    <div className="absolute left-1/2 transform -translate-x-1/2">
-                      <img
-                        src="/lovable-uploads/b2b226b3-3764-477e-a92e-6a4f6db08676.png"
-                        alt="GoVV Logo"
-                        className="h-[60px] w-auto"
-                      />
-                    </div>
 
                     {/* Right Navigation */}
                     <div className="flex gap-3">
