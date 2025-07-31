@@ -222,143 +222,111 @@ export const Desktop = (): JSX.Element => {
         {/* Hero Section */}
         <div id="home" className="h-screen min-h-[800px] md:h-[1024px] relative overflow-hidden">
           <div className="relative w-full h-full">
-            {/* Top section - Mobile responsive */}
+            {/* Top section - Original desktop layout */}
             <div className="absolute w-full h-full top-0 left-0">
               <div className="h-full w-full relative">
-                {/* Navigation Menu - Mobile Responsive */}
-                <div className="absolute top-4 md:top-[31px] left-0 w-full px-4 md:px-[53px] z-20">
-                  <div className="flex items-center justify-center w-full">
-                    {/* Mobile Navigation - Compact Layout */}
-                    <div className="flex flex-wrap gap-2 md:gap-3 justify-center md:justify-between w-full max-w-[320px] md:max-w-none">
-                      {/* Left Navigation */}
-                      <div className="flex gap-2 md:gap-3 md:mr-auto">
-                        {leftNavItems.map((item, index) => (
-                          <a
-                            key={index}
-                            href={item.text === "Home" ? "#home" : item.text === "Our Bikes" ? "#bikes" : "#technology"}
-                            className={`${glassCardStyle} w-[70px] md:w-[120px] h-[35px] md:h-[50px] flex items-center justify-center [font-family:'Poppins',Helvetica] font-bold text-black text-xs md:text-lg cursor-pointer hover:scale-105 transition-transform`}
-                          >
-                            {item.text === "Our Bikes" ? "Bikes" : item.text}
-                          </a>
-                        ))}
-                      </div>
+                {/* Navigation Menu - Fixed desktop layout */}
+                <div className="absolute top-[31px] left-[53px] right-[53px] z-20">
+                  <div className="flex items-center justify-between w-full">
+                    {/* Left Navigation */}
+                    <div className="flex gap-3">
+                      {leftNavItems.map((item, index) => (
+                        <a
+                          key={index}
+                          href={item.text === "Home" ? "#home" : item.text === "Our Bikes" ? "#bikes" : "#technology"}
+                          className={`${glassCardStyle} w-[120px] h-[50px] flex items-center justify-center [font-family:'Poppins',Helvetica] font-bold text-black text-lg cursor-pointer hover:scale-105 transition-transform`}
+                        >
+                          {item.text}
+                        </a>
+                      ))}
+                    </div>
 
-                      {/* Right Navigation */}
-                      <div className="flex gap-2 md:gap-3">
-                        {rightNavItems.map((item, index) => (
-                          <a
-                            key={index}
-                            href={item.text === "About" ? "#about" : item.text === "Blog" ? "#blog" : "#customize"}
-                            className={`${glassCardStyle} w-[70px] md:w-[120px] h-[35px] md:h-[50px] flex items-center justify-center [font-family:'Poppins',Helvetica] font-bold text-black text-xs md:text-lg cursor-pointer hover:scale-105 transition-transform`}
-                          >
-                            {item.text}
-                          </a>
-                        ))}
-                      </div>
+                    {/* Right Navigation */}
+                    <div className="flex gap-3">
+                      {rightNavItems.map((item, index) => (
+                        <a
+                          key={index}
+                          href={item.text === "About" ? "#about" : item.text === "Blog" ? "#blog" : "#customize"}
+                          className={`${glassCardStyle} w-[120px] h-[50px] flex items-center justify-center [font-family:'Poppins',Helvetica] font-bold text-black text-lg cursor-pointer hover:scale-105 transition-transform`}
+                        >
+                          {item.text}
+                        </a>
+                      ))}
                     </div>
                   </div>
                 </div>
 
-                {/* Background and bike image - Mobile optimized */}
+                {/* Background and bike image - Original positioning */}
                 <div className="absolute w-full h-full top-0 left-0 bg-[url(/figmaAssets/vector-5-1.svg)] bg-cover bg-center" />
-                <div className="absolute inset-0 flex items-center justify-center md:justify-start">
+                <div className="absolute top-0 left-0 w-full h-full flex items-center justify-start">
                   <img
-                    className="w-[300px] md:w-[720px] h-[200px] md:h-[506px] object-contain md:ml-0 mt-16 md:mt-0"
+                    className="w-[720px] h-[506px] object-contain ml-0"
                     alt="Electric Bike"
                     src="/figmaAssets/vector-121.svg"
                   />
                 </div>
 
-                {/* Mobile Specification Cards - Grid layout below bike */}
-                <div className="block md:hidden absolute bottom-24 left-4 right-4 z-15">
-                  <div className="grid grid-cols-3 gap-2">
-                    {specCards.slice(0, 6).map((card, index) => (
-                      <Card
-                        key={`mobile-spec-card-${index}`}
-                        className={`${glassCardStyle} p-2`}
-                      >
-                        <CardContent className="p-0 flex flex-col items-center">
-                          <img
-                            className="w-[25px] h-[25px] mb-1"
-                            alt="Feature icon"
-                            src={card.icon}
-                          />
-                          <div className="text-center [font-family:'Poppins',Helvetica] font-bold text-black text-[10px]">
-                            {card.title}
-                            <br />
-                            <span className="text-[8px]">{card.description}</span>
-                          </div>
-                        </CardContent>
-                      </Card>
-                    ))}
-                  </div>
-                </div>
+                {/* Desktop Specification Cards - Original absolute positioning */}
+                {specCards.map((card, index) => (
+                  <Card
+                    key={`spec-card-${index}`}
+                    className={`absolute ${glassCardStyle} z-15`}
+                    style={{
+                      top: card.top,
+                      left: card.left,
+                      width: "125px",
+                      height: index === 5 ? "132px" : "123px",
+                    }}
+                  >
+                    <CardContent className="p-0 flex flex-col items-center">
+                      <img
+                        className="w-[50px] h-[50px] mt-2"
+                        alt="Feature icon"
+                        src={card.icon}
+                      />
+                      <div className="mt-2 text-center [font-family:'Poppins',Helvetica] font-bold text-black text-base">
+                        {card.title}
+                        <br />
+                        {card.description}
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
 
-                {/* Desktop Specification Cards - Hidden on mobile */}
-                <div className="hidden md:block">
-                  {specCards.map((card, index) => (
-                    <Card
-                      key={`spec-card-${index}`}
-                      className={`absolute ${glassCardStyle} z-15`}
-                      style={{
-                        top: card.top,
-                        left: card.left,
-                        width: "125px",
-                        height: index === 5 ? "132px" : "123px",
-                      }}
-                    >
-                      <CardContent className="p-0 flex flex-col items-center">
-                        <img
-                          className="w-[50px] h-[50px] mt-2"
-                          alt="Feature icon"
-                          src={card.icon}
-                        />
-                        <div className="mt-2 text-center [font-family:'Poppins',Helvetica] font-bold text-black text-base">
-                          {card.title}
-                          <br />
-                          {card.description}
-                        </div>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-
-                {/* Decorative elements - Hidden on mobile for cleaner look */}
-                <div className="hidden md:block">
-                  <img
-                    className="absolute w-[85px] h-[134px] top-3 left-[694px] z-5"
-                    alt="Vector"
-                    src="/figmaAssets/vector-1-1.svg"
-                  />
-                  <img
-                    className="absolute w-14 h-[55px] top-[74px] left-[668px] z-5"
-                    alt="Ellipse"
-                    src="/figmaAssets/ellipse-1.svg"
-                  />
-                  <img
-                    className="absolute w-[74px] h-[92px] top-[39px] left-[750px] z-5"
-                    alt="Ellipse"
-                    src="/figmaAssets/ellipse-3.svg"
-                  />
-                  <img
-                    className="absolute w-[57px] h-[65px] top-[11px] left-[666px] z-5"
-                    alt="Ellipse"
-                    src="/figmaAssets/ellipse-4.svg"
-                  />
-                  <img
-                    className="absolute w-9 h-[41px] top-6 left-[679px] z-5"
-                    alt="Vector"
-                    src="/figmaAssets/vector-2-1.svg"
-                  />
-                </div>
+                {/* Decorative elements - Original positioning */}
+                <img
+                  className="absolute w-[85px] h-[134px] top-3 left-[694px] z-5"
+                  alt="Vector"
+                  src="/figmaAssets/vector-1-1.svg"
+                />
+                <img
+                  className="absolute w-14 h-[55px] top-[74px] left-[668px] z-5"
+                  alt="Ellipse"
+                  src="/figmaAssets/ellipse-1.svg"
+                />
+                <img
+                  className="absolute w-[74px] h-[92px] top-[39px] left-[750px] z-5"
+                  alt="Ellipse"
+                  src="/figmaAssets/ellipse-3.svg"
+                />
+                <img
+                  className="absolute w-[57px] h-[65px] top-[11px] left-[666px] z-5"
+                  alt="Ellipse"
+                  src="/figmaAssets/ellipse-4.svg"
+                />
+                <img
+                  className="absolute w-9 h-[41px] top-6 left-[679px] z-5"
+                  alt="Vector"
+                  src="/figmaAssets/vector-2-1.svg"
+                />
               </div>
             </div>
 
-            {/* Bottom section - Mobile responsive */}
+            {/* Bottom section - Original positioning */}
             <div className="absolute w-full bottom-0 left-0">
               <div className="relative">
                 {/* Top curve separator */}
-                <div className="absolute w-full h-[50px] md:h-[92px] -top-[50px] md:-top-[92px] left-0">
+                <div className="absolute w-full h-[92px] -top-[92px] left-0">
                   <img
                     className="absolute w-full h-full left-0"
                     alt="Vector"
@@ -366,17 +334,16 @@ export const Desktop = (): JSX.Element => {
                   />
                 </div>
 
-                {/* Content section - Mobile responsive */}
-                <div className="w-full bg-[url(/figmaAssets/vector-6-1.svg)] bg-cover bg-center px-4 md:px-[115px] py-8 md:py-16">
-                  {/* Mobile-friendly content layout */}
-                  <div className="text-center md:text-left mb-6 md:mb-8">
-                    <div className="[font-family:'Poppins',Helvetica] font-bold text-white text-sm md:text-2xl mb-2 md:mb-4">
+                {/* Content section - Original layout */}
+                <div className="w-full bg-[url(/figmaAssets/vector-6-1.svg)] bg-cover bg-center px-[115px] py-16">
+                  <div className="text-left mb-8">
+                    <div className="[font-family:'Poppins',Helvetica] font-bold text-white text-2xl mb-4">
                       MAXIMIZE YOUR PRODUCTIVITY
                     </div>
-                    <div className="[font-family:'Poppins',Helvetica] font-bold text-[#b5d33c] text-2xl md:text-[50px] mb-4 md:mb-6 leading-tight">
+                    <div className="[font-family:'Poppins',Helvetica] font-bold text-[#b5d33c] text-[50px] mb-6 leading-tight">
                       GOVV - CAMPUS RIDER 1
                     </div>
-                    <div className="[font-family:'Poppins',Helvetica] font-bold text-white text-sm md:text-xl leading-relaxed max-w-2xl mx-auto md:mx-0">
+                    <div className="[font-family:'Poppins',Helvetica] font-bold text-white text-xl leading-relaxed max-w-2xl">
                       Empower Your Campus Commute! <br />
                       Designed for life on the move, Campus Rider is
                       GoVV&apos;s compact and efficient e‑cycle
@@ -385,25 +352,24 @@ export const Desktop = (): JSX.Element => {
                     </div>
                   </div>
 
-                  {/* Variants section - Mobile responsive */}
-                  <div className="flex flex-col md:flex-row gap-4 md:gap-8 items-center justify-center md:justify-start">
-                    <div className="[font-family:'Poppins',Helvetica] font-bold text-white text-lg md:text-2xl mb-2 md:mb-0">
+                  {/* Variants section - Original positioning */}
+                  <div className="flex items-center gap-8">
+                    <div className="[font-family:'Poppins',Helvetica] font-bold text-white text-2xl">
                       Variants:
                     </div>
                     
-                    {/* Mobile variant cards */}
-                    <div className="flex flex-col md:flex-row gap-3 md:gap-4 w-full md:w-auto">
+                    <div className="flex gap-4">
                       {variants.map((variant, index) => (
                         <div
                           key={`variant-${index}`}
-                          className="w-full md:w-[260px] h-16 md:h-20 rounded-[35px] shadow-[inset_0px_4px_4px_#665e3440] blur-[0.45px] backdrop-blur-[0.7px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(0.7px)_brightness(100%)] bg-[linear-gradient(35deg,rgba(218,217,164,1)_43%,rgba(116,115,87,1)_100%)] flex items-center p-2"
+                          className="w-[260px] h-20 rounded-[35px] shadow-[inset_0px_4px_4px_#665e3440] blur-[0.45px] backdrop-blur-[0.7px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(0.7px)_brightness(100%)] bg-[linear-gradient(35deg,rgba(218,217,164,1)_43%,rgba(116,115,87,1)_100%)] flex items-center p-2"
                         >
                           <img
-                            className="w-[60px] md:w-[111px] h-[50px] md:h-[71px] object-contain"
+                            className="w-[111px] h-[71px] object-contain"
                             alt="Variant"
                             src={variant.imageSrc}
                           />
-                          <div className="ml-2 md:ml-4 [font-family:'Poppins',Helvetica] font-bold text-black text-sm">
+                          <div className="ml-4 [font-family:'Poppins',Helvetica] font-bold text-black text-sm">
                             {variant.title}
                           </div>
                         </div>
