@@ -180,25 +180,25 @@ export const Desktop = (): JSX.Element => {
   const team = [
     {
       initials: "AS",
-      name: "",
+      name: "Arjun Sharma",
       role: "CEO & Co-Founder",
       description: "Former Tesla engineer with 8+ years in electric vehicle technology"
     },
     {
       initials: "PP",
-      name: "",
+      name: "Priya Patel",
       role: "CTO & Co-Founder",
       description: "Ex-Google software architect specializing in IoT and mobile applications"
     },
     {
       initials: "RK",
-      name: "",
+      name: "Ravi Kumar",
       role: "Head of Design",
       description: "Award-winning industrial designer with expertise in sustainable mobility"
     },
     {
       initials: "DMS",
-      name: "",
+      name: "Dr. Meera Singh",
       role: "Head of R&D",
       description: "PhD in Battery Technology from IIT Delhi, 10+ years in energy storage"
     }
@@ -219,13 +219,13 @@ export const Desktop = (): JSX.Element => {
   return (
     <div className="bg-gradient-to-br from-slate-50 to-blue-50 min-h-screen w-full overflow-x-hidden">
       <div className="bg-gradient-to-br from-slate-50 to-blue-50 w-full relative">
-        {/* Hero Section */}
-        <div id="home" className="h-screen min-h-[800px] md:h-[1024px] relative overflow-hidden">
+        {/* Hero Section - Desktop Only */}
+        <div id="home" className="h-[1024px] relative overflow-hidden">
           <div className="relative w-full h-full">
-            {/* Top section - Original desktop layout */}
+            {/* Top section - Desktop layout */}
             <div className="absolute w-full h-full top-0 left-0">
               <div className="h-full w-full relative">
-                {/* Navigation Menu - Fixed desktop layout with logo */}
+                {/* Navigation Menu - Desktop Only */}
                 <div className="absolute top-[31px] left-[53px] right-[53px] z-20">
                   <div className="flex items-center justify-between w-full relative">
                     {/* Left Navigation */}
@@ -241,7 +241,15 @@ export const Desktop = (): JSX.Element => {
                       ))}
                     </div>
 
-                   
+                    {/* Logo - Centered */}
+                    <div className="absolute left-1/2 transform -translate-x-1/2">
+                      <img 
+                        src="/govv.png" 
+                        alt="GoVV Logo" 
+                        className="h-[100px] w-auto object-contain"  // Increased from 66px to 100px
+                      />
+                    </div>
+
 
                     {/* Right Navigation */}
                     <div className="flex gap-3">
@@ -258,18 +266,17 @@ export const Desktop = (): JSX.Element => {
                   </div>
                 </div>
 
-                {/* Background and bike image - Original positioning */}
-               <div className="absolute w-full h-full top-0 left-0 bg-[url(/figmaAssets/vector-5-1.svg)] bg-cover bg-center" />
+                {/* Background and bike image - Desktop positioning */}
+                <div className="absolute w-full h-full top-0 left-0 bg-[url(/figmaAssets/vector-5-1.svg)] bg-cover bg-center" />
                 <div className="absolute top-0 left-0 w-full h-full flex justify-start">
-  <img
-    className="w-[720px] h-[506px] object-contain ml-0 z-[310] mt-[72px]"
-    alt="Electric Bike"
-    src="/figmaAssets/vector-121.svg"
-  />
-</div>
+                  <img
+                    className="w-[720px] h-[506px] object-contain ml-0 z-[310] mt-[72px]"
+                    alt="Electric Bike"
+                    src="/figmaAssets/vector-121.svg"
+                  />
+                </div>
 
-
-                {/* Desktop Specification Cards - Original absolute positioning */}
+                {/* Desktop Specification Cards - Absolute positioning */}
                 {specCards.map((card, index) => (
                   <Card
                     key={`spec-card-${index}`}
@@ -295,13 +302,10 @@ export const Desktop = (): JSX.Element => {
                     </CardContent>
                   </Card>
                 ))}
-
-                {/* Decorative elements - Original positioning */}
-                
               </div>
             </div>
 
-            {/* Bottom section - Original positioning */}
+            {/* Bottom section - Desktop positioning */}
             <div className="absolute w-full bottom-0 left-0">
               <div className="relative">
                 {/* Top curve separator */}
@@ -313,11 +317,10 @@ export const Desktop = (): JSX.Element => {
                   />
                 </div>
 
-                {/* Content section - Original layout */}
+                {/* Content section - Desktop layout */}
                 <div className="w-full bg-[url(/figmaAssets/vector-6-1.svg)] bg-cover bg-center px-[115px] py-16">
                   <div className="text-left mb-8">
                     <div className="[font-family:'Poppins',Helvetica] font-bold text-white text-4xl mb-4">
-                      
                       MAXIMIZE YOUR PRODUCTIVITY
                     </div>
                     <div className="[font-family:'Poppins',Helvetica] font-bold text-[#b5d33c] text-[50px] mb-6 leading-tight">
@@ -326,13 +329,13 @@ export const Desktop = (): JSX.Element => {
                     <div className="[font-family:'Poppins',Helvetica] font-bold text-white text-xl leading-relaxed max-w-2xl">
                       Empower Your Campus Commute! <br />
                       Designed for life on the move, Campus Rider is
-                      GoVV&apos;s compact and efficient e‑cycle
+                      GoVV's compact and efficient e‑cycle
                       tailored for universities, tech parks, and
                       institutional campuses
                     </div>
                   </div>
 
-                  {/* Variants section - Original positioning */}
+                  {/* Variants section - Desktop positioning */}
                   <div className="flex items-center gap-8">
                     <div className="[font-family:'Poppins',Helvetica] font-bold text-white text-2xl">
                       Variants:
@@ -362,19 +365,19 @@ export const Desktop = (): JSX.Element => {
           </div>
         </div>
         
-        {/* Technology Section */}
-        <div id="technology" className="py-12 md:py-20 px-4 md:px-[53px] bg-gradient-to-br from-slate-50 to-blue-50">
+        {/* Technology Section - Desktop Only */}
+        <div id="technology" className="py-20 px-[53px] bg-gradient-to-br from-slate-50 to-blue-50">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12 md:mb-16">
-            <h2 className="[font-family:'Poppins',Helvetica] font-bold text-[#b5d33c] text-3xl md:text-5xl mb-4">
-              Advanced Technology
-            </h2>
-            <p className="[font-family:'Poppins',Helvetica] font-medium text-black text-lg md:text-xl max-w-4xl mx-auto px-4">
-              Cutting-edge innovations that make Go VV bikes the smartest choice for modern urban mobility
-            </p>
-          </div>
+            <div className="text-center mb-16">
+              <h2 className="[font-family:'Poppins',Helvetica] font-bold text-[#b5d33c] text-5xl mb-4">
+                Advanced Technology
+              </h2>
+              <p className="[font-family:'Poppins',Helvetica] font-medium text-black text-xl max-w-4xl mx-auto">
+                Cutting-edge innovations that make Go VV bikes the smartest choice for modern urban mobility
+              </p>
+            </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            <div className="grid grid-cols-2 gap-8 mb-16">
               {techFeatures.map((feature, index) => (
                 <Card key={index} className={`${glassCardStyle} p-6 hover:scale-105 transition-transform`}>
                   <CardHeader>
@@ -401,59 +404,59 @@ export const Desktop = (): JSX.Element => {
           </div>
         </div>
 
-        {/* Bikes Section */}
-        <div id="bikes" className="py-12 md:py-20 px-4 md:px-[53px] bg-gradient-to-br from-blue-50 to-slate-100">
+        {/* Bikes Section - Desktop Only */}
+        <div id="bikes" className="py-20 px-[53px] bg-gradient-to-br from-blue-50 to-slate-100">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12 md:mb-16">
-            <h2 className="[font-family:'Poppins',Helvetica] font-bold text-[#b5d33c] text-3xl md:text-5xl mb-4">
-              Our Bikes
-            </h2>
-            <p className="[font-family:'Poppins',Helvetica] font-medium text-black text-lg md:text-xl max-w-4xl mx-auto px-4">
-              Discover our range of electric bikes designed for every urban adventure
-            </p>
-          </div>
+            <div className="text-center mb-16">
+              <h2 className="[font-family:'Poppins',Helvetica] font-bold text-[#b5d33c] text-5xl mb-4">
+                Our Bikes
+              </h2>
+              <p className="[font-family:'Poppins',Helvetica] font-medium text-black text-xl max-w-4xl mx-auto">
+                Discover our range of electric bikes designed for every urban adventure
+              </p>
+            </div>
 
-            <div className="space-y-12 md:space-y-20">
+            <div className="space-y-20">
               {bikeModels.map((bike, index) => (
-                <div key={index} className={`grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
+                <div key={index} className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
                   <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
-                    <Card className="relative overflow-hidden bg-gradient-to-br from-white/80 to-white/60 backdrop-blur-xl border border-white/30 shadow-2xl p-4 md:p-8 hover:scale-105 transition-all duration-300 hover:shadow-3xl group">
+                    <Card className="relative overflow-hidden bg-gradient-to-br from-white/80 to-white/60 backdrop-blur-xl border border-white/30 shadow-2xl p-8 hover:scale-105 transition-all duration-300 hover:shadow-3xl group">
                       {/* Decorative gradient overlay */}
                       <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/10 to-transparent opacity-50 group-hover:opacity-70 transition-opacity"></div>
                       
                       <CardHeader className="relative z-10">
-                        <div className="flex items-center mb-4 md:mb-6">
-                          <div className="w-4 md:w-6 h-4 md:h-6 rounded-full mr-3 md:mr-4 shadow-lg ring-2 ring-white/50" style={{ backgroundColor: bike.color }}></div>
-                          <CardTitle className="[font-family:'Poppins',Helvetica] font-bold text-2xl md:text-4xl bg-gradient-to-r bg-clip-text text-transparent" 
+                        <div className="flex items-center mb-6">
+                          <div className="w-6 h-6 rounded-full mr-4 shadow-lg ring-2 ring-white/50" style={{ backgroundColor: bike.color }}></div>
+                          <CardTitle className="[font-family:'Poppins',Helvetica] font-bold text-4xl bg-gradient-to-r bg-clip-text text-transparent" 
                                      style={{ backgroundImage: `linear-gradient(135deg, ${bike.color}, ${bike.color}dd)` }}>
                             {bike.name}
                           </CardTitle>
                         </div>
                         <div className="relative">
-                          <h3 className="[font-family:'Poppins',Helvetica] font-bold text-black text-lg md:text-2xl mb-4 relative z-10">
+                          <h3 className="[font-family:'Poppins',Helvetica] font-bold text-black text-2xl mb-4 relative z-10">
                             {bike.tagline}
                           </h3>
-                          <div className="absolute left-0 bottom-0 w-16 md:w-20 h-1 rounded-full" style={{ backgroundColor: bike.color }}></div>
+                          <div className="absolute left-0 bottom-0 w-20 h-1 rounded-full" style={{ backgroundColor: bike.color }}></div>
                         </div>
                       </CardHeader>
                       
                       <CardContent className="p-0 relative z-10">
-                        <p className="[font-family:'Poppins',Helvetica] font-medium text-gray-700 text-base md:text-lg mb-6 md:mb-8 leading-relaxed">
+                        <p className="[font-family:'Poppins',Helvetica] font-medium text-gray-700 text-lg mb-8 leading-relaxed">
                           {bike.description}
                         </p>
                         
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
+                        <div className="grid grid-cols-2 gap-4">
                           {bike.features.map((feature, featureIndex) => (
                             <div key={featureIndex} className="group/feature relative overflow-hidden">
-                              <div className="bg-gradient-to-br from-white/40 to-white/20 backdrop-blur-sm border border-white/30 rounded-xl p-3 md:p-4 hover:from-white/60 hover:to-white/40 transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                              <div className="bg-gradient-to-br from-white/40 to-white/20 backdrop-blur-sm border border-white/30 rounded-xl p-4 hover:from-white/60 hover:to-white/40 transition-all duration-300 hover:scale-105 hover:shadow-lg">
                                 {/* Feature icon background */}
-                                <div className="absolute top-2 right-2 w-6 md:w-8 h-6 md:h-8 rounded-full opacity-10" style={{ backgroundColor: bike.color }}></div>
+                                <div className="absolute top-2 right-2 w-8 h-8 rounded-full opacity-10" style={{ backgroundColor: bike.color }}></div>
                                 
                                 <div className="relative z-10">
-                                  <span className="[font-family:'Poppins',Helvetica] font-semibold text-gray-800 text-xs md:text-sm block mb-1 md:mb-2">
+                                  <span className="[font-family:'Poppins',Helvetica] font-semibold text-gray-800 text-sm block mb-2">
                                     {feature.label}:
                                   </span>
-                                  <span className="[font-family:'Poppins',Helvetica] font-bold text-black text-base md:text-lg">
+                                  <span className="[font-family:'Poppins',Helvetica] font-bold text-black text-lg">
                                     {feature.value}
                                   </span>
                                 </div>
@@ -463,8 +466,8 @@ export const Desktop = (): JSX.Element => {
                         </div>
                         
                         {/* Action button */}
-                        <div className="mt-6 md:mt-8 flex justify-center">
-                          <button className="bg-gradient-to-r from-white/30 to-white/10 backdrop-blur-sm border-2 border-white/40 rounded-full px-6 md:px-8 py-2 md:py-3 [font-family:'Poppins',Helvetica] font-bold text-black hover:from-white/50 hover:to-white/30 hover:border-white/60 transition-all duration-300 hover:scale-105 hover:shadow-lg text-sm md:text-base"
+                        <div className="mt-8 flex justify-center">
+                          <button className="bg-gradient-to-r from-white/30 to-white/10 backdrop-blur-sm border-2 border-white/40 rounded-full px-8 py-3 [font-family:'Poppins',Helvetica] font-bold text-black hover:from-white/50 hover:to-white/30 hover:border-white/60 transition-all duration-300 hover:scale-105 hover:shadow-lg text-base"
                                   style={{ borderColor: `${bike.color}40` }}>
                             <span className="flex items-center gap-2">
                               <span>Learn More</span>
@@ -479,7 +482,7 @@ export const Desktop = (): JSX.Element => {
                     <img
                       src={bike.image}
                       alt={bike.name}
-                      className="w-[280px] md:w-[400px] h-[210px] md:h-[300px] object-contain hover:scale-110 transition-transform"
+                      className="w-[400px] h-[300px] object-contain hover:scale-110 transition-transform"
                     />
                   </div>
                 </div>
@@ -488,143 +491,143 @@ export const Desktop = (): JSX.Element => {
           </div>
         </div>
 
-        {/* About Section */}
-        <div id="about" className="py-12 md:py-20 px-4 md:px-[53px] bg-gradient-to-br from-slate-100 to-blue-100">
+        {/* About Section - Desktop Only */}
+        <div id="about" className="py-20 px-[53px] bg-gradient-to-br from-slate-100 to-blue-100">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12 md:mb-16">
-            <h2 className="[font-family:'Poppins',Helvetica] font-bold text-[#b5d33c] text-3xl md:text-5xl mb-4">
-              About Go VV
-            </h2>
-            <p className="[font-family:'Poppins',Helvetica] font-medium text-black text-lg md:text-xl max-w-4xl mx-auto px-4">
-              Pioneering the future of urban mobility in India with smart, sustainable electric bicycles
-            </p>
-          </div>
-
-          {/* Mission & Vision */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-12 md:mb-16">
-            <Card className={`${glassCardStyle} p-4 md:p-8`}>
-              <CardHeader>
-                <CardTitle className="[font-family:'Poppins',Helvetica] font-bold text-[#b5d33c] text-xl md:text-2xl mb-4">
-                  Our Mission
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="p-0">
-                <p className="[font-family:'Poppins',Helvetica] font-medium text-gray-700 mb-4">
-                  To revolutionize urban transportation in India by creating smart, sustainable, and affordable electric bicycles that empower people to go further, go freely, and contribute to a cleaner environment.
-                </p>
-                <p className="[font-family:'Poppins',Helvetica] font-medium text-gray-700">
-                  We believe that the future of urban mobility lies in intelligent, eco-friendly solutions that seamlessly integrate with modern lifestyles while reducing our carbon footprint.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className={`${glassCardStyle} p-4 md:p-8`}>
-              <CardHeader>
-                <CardTitle className="[font-family:'Poppins',Helvetica] font-bold text-[#b5d33c] text-xl md:text-2xl mb-4">
-                  Our Vision
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="p-0">
-                <p className="[font-family:'Poppins',Helvetica] font-medium text-gray-700 mb-4">
-                  To become India's leading electric mobility brand, transforming cities into cleaner, more liveable spaces where smart transportation solutions enable people to lead healthier, more connected lives.
-                </p>
-                <p className="[font-family:'Poppins',Helvetica] font-medium text-gray-700">
-                  We envision a future where every urban commuter has access to intelligent, sustainable transportation that adapts to their needs and contributes to building smarter cities.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Our Values */}
-          <div className="mb-12 md:mb-16">
-            <h3 className="[font-family:'Poppins',Helvetica] font-bold text-black text-2xl md:text-3xl text-center mb-6 md:mb-8">
-              Our Values
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-              {values.map((value, index) => (
-                <Card key={index} className={`${glassCardStyle} p-4 md:p-6 text-center hover:scale-105 transition-transform`}>
-                  <CardHeader>
-                    <CardTitle className="[font-family:'Poppins',Helvetica] font-bold text-[#b5d33c] text-lg md:text-xl mb-3">
-                      {value.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="p-0">
-                    <p className="[font-family:'Poppins',Helvetica] font-medium text-gray-700">
-                      {value.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              ))}
+            <div className="text-center mb-16">
+              <h2 className="[font-family:'Poppins',Helvetica] font-bold text-[#b5d33c] text-5xl mb-4">
+                About Go VV
+              </h2>
+              <p className="[font-family:'Poppins',Helvetica] font-medium text-black text-xl max-w-4xl mx-auto">
+                Pioneering the future of urban mobility in India with smart, sustainable electric bicycles
+              </p>
             </div>
-          </div>
 
-          {/* Our Team */}
-          <div className="mb-12 md:mb-16">
-            <h3 className="[font-family:'Poppins',Helvetica] font-bold text-black text-2xl md:text-3xl text-center mb-6 md:mb-8">
-              Our Team
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-              {team.map((member, index) => (
-                <Card key={index} className={`${glassCardStyle} p-4 md:p-6 text-center hover:scale-105 transition-transform`}>
-                  <CardHeader>
-                    <div className="w-16 md:w-20 h-16 md:h-20 bg-[#b5d33c] rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="[font-family:'Poppins',Helvetica] font-bold text-white text-lg md:text-xl">
-                        {member.initials}
-                      </span>
-                    </div>
-                    <CardTitle className="[font-family:'Poppins',Helvetica] font-bold text-black text-base md:text-lg mb-1">
-                      {member.name}
-                    </CardTitle>
-                    <p className="[font-family:'Poppins',Helvetica] font-semibold text-[#b5d33c] text-xs md:text-sm mb-3">
-                      {member.role}
-                    </p>
-                  </CardHeader>
-                  <CardContent className="p-0">
-                    <p className="[font-family:'Poppins',Helvetica] font-medium text-gray-700 text-sm">
-                      {member.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
+            {/* Mission & Vision */}
+            <div className="grid grid-cols-2 gap-8 mb-16">
+              <Card className={`${glassCardStyle} p-8`}>
+                <CardHeader>
+                  <CardTitle className="[font-family:'Poppins',Helvetica] font-bold text-[#b5d33c] text-2xl mb-4">
+                    Our Mission
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="p-0">
+                  <p className="[font-family:'Poppins',Helvetica] font-medium text-gray-700 mb-4">
+                    To revolutionize urban transportation in India by creating smart, sustainable, and affordable electric bicycles that empower people to go further, go freely, and contribute to a cleaner environment.
+                  </p>
+                  <p className="[font-family:'Poppins',Helvetica] font-medium text-gray-700">
+                    We believe that the future of urban mobility lies in intelligent, eco-friendly solutions that seamlessly integrate with modern lifestyles while reducing our carbon footprint.
+                  </p>
+                </CardContent>
+              </Card>
 
-          {/* Statistics */}
-          <div>
-            <h3 className="[font-family:'Poppins',Helvetica] font-bold text-black text-2xl md:text-3xl text-center mb-6 md:mb-8">
-              Our Impact
-            </h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-              {stats.map((stat, index) => (
-                <Card key={index} className={`${glassCardStyle} p-4 md:p-6 text-center hover:scale-105 transition-transform`}>
-                  <CardContent className="p-0 flex flex-col items-center">
-                    <div className="[font-family:'Poppins',Helvetica] font-bold text-[#b5d33c] text-2xl md:text-4xl mb-2">
-                      {stat.number}
-                    </div>
-                    <div className="[font-family:'Poppins',Helvetica] font-medium text-black text-sm md:text-lg">
-                      {stat.label}
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
+              <Card className={`${glassCardStyle} p-8`}>
+                <CardHeader>
+                  <CardTitle className="[font-family:'Poppins',Helvetica] font-bold text-[#b5d33c] text-2xl mb-4">
+                    Our Vision
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="p-0">
+                  <p className="[font-family:'Poppins',Helvetica] font-medium text-gray-700 mb-4">
+                    To become India's leading electric mobility brand, transforming cities into cleaner, more liveable spaces where smart transportation solutions enable people to lead healthier, more connected lives.
+                  </p>
+                  <p className="[font-family:'Poppins',Helvetica] font-medium text-gray-700">
+                    We envision a future where every urban commuter has access to intelligent, sustainable transportation that adapts to their needs and contributes to building smarter cities.
+                  </p>
+                </CardContent>
+              </Card>
             </div>
-          </div>
+
+            {/* Our Values */}
+            <div className="mb-16">
+              <h3 className="[font-family:'Poppins',Helvetica] font-bold text-black text-3xl text-center mb-8">
+                Our Values
+              </h3>
+              <div className="grid grid-cols-4 gap-6">
+                {values.map((value, index) => (
+                  <Card key={index} className={`${glassCardStyle} p-6 text-center hover:scale-105 transition-transform`}>
+                    <CardHeader>
+                      <CardTitle className="[font-family:'Poppins',Helvetica] font-bold text-[#b5d33c] text-xl mb-3">
+                        {value.title}
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent className="p-0">
+                      <p className="[font-family:'Poppins',Helvetica] font-medium text-gray-700 text-sm">
+                        {value.description}
+                      </p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+
+            {/* Our Team */}
+            <div className="mb-16">
+              <h3 className="[font-family:'Poppins',Helvetica] font-bold text-black text-3xl text-center mb-8">
+                Our Team
+              </h3>
+              <div className="grid grid-cols-4 gap-6">
+                {team.map((member, index) => (
+                  <Card key={index} className={`${glassCardStyle} p-6 text-center hover:scale-105 transition-transform`}>
+                    <CardHeader>
+                      <div className="w-20 h-20 bg-[#b5d33c] rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span className="[font-family:'Poppins',Helvetica] font-bold text-white text-xl">
+                          {member.initials}
+                        </span>
+                      </div>
+                      <CardTitle className="[font-family:'Poppins',Helvetica] font-bold text-black text-lg mb-1">
+                        {member.name}
+                      </CardTitle>
+                      <p className="[font-family:'Poppins',Helvetica] font-semibold text-[#b5d33c] text-sm mb-3">
+                        {member.role}
+                      </p>
+                    </CardHeader>
+                    <CardContent className="p-0">
+                      <p className="[font-family:'Poppins',Helvetica] font-medium text-gray-700 text-sm">
+                        {member.description}
+                      </p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+
+            {/* Statistics */}
+            <div>
+              <h3 className="[font-family:'Poppins',Helvetica] font-bold text-black text-3xl text-center mb-8">
+                Our Impact
+              </h3>
+              <div className="grid grid-cols-4 gap-6">
+                {stats.map((stat, index) => (
+                  <Card key={index} className={`${glassCardStyle} p-6 text-center hover:scale-105 transition-transform`}>
+                    <CardContent className="p-0 flex flex-col items-center">
+                      <div className="[font-family:'Poppins',Helvetica] font-bold text-[#b5d33c] text-4xl mb-2">
+                        {stat.number}
+                      </div>
+                      <div className="[font-family:'Poppins',Helvetica] font-medium text-black text-lg">
+                        {stat.label}
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Blog Section */}
-        <div id="blog" className="py-12 md:py-20 px-4 md:px-[53px] bg-gradient-to-br from-blue-100 to-slate-50">
+        {/* Blog Section - Desktop Only */}
+        <div id="blog" className="py-20 px-[53px] bg-gradient-to-br from-blue-100 to-slate-50">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12 md:mb-16">
-            <h2 className="[font-family:'Poppins',Helvetica] font-bold text-[#b5d33c] text-3xl md:text-5xl mb-4">
-              Latest Updates
-            </h2>
-            <p className="[font-family:'Poppins',Helvetica] font-medium text-black text-lg md:text-xl max-w-4xl mx-auto px-4">
-              Stay informed about the latest developments in electric mobility and GoVV innovations
-            </p>
-          </div>
+            <div className="text-center mb-16">
+              <h2 className="[font-family:'Poppins',Helvetica] font-bold text-[#b5d33c] text-5xl mb-4">
+                Latest Updates
+              </h2>
+              <p className="[font-family:'Poppins',Helvetica] font-medium text-black text-xl max-w-4xl mx-auto">
+                Stay informed about the latest developments in electric mobility and GoVV innovations
+              </p>
+            </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+            <div className="grid grid-cols-3 gap-8">
               {[
                 {
                   title: "The Future of Urban Mobility is Electric",
@@ -645,17 +648,17 @@ export const Desktop = (): JSX.Element => {
                   readTime: "6 min read"
                 }
               ].map((post, index) => (
-                <Card key={index} className={`${glassCardStyle} p-4 md:p-6 hover:scale-105 transition-transform cursor-pointer`}>
+                <Card key={index} className={`${glassCardStyle} p-6 hover:scale-105 transition-transform cursor-pointer`}>
                   <CardHeader>
                     <div className="flex justify-between items-start mb-2">
-                      <span className="[font-family:'Poppins',Helvetica] font-medium text-[#b5d33c] text-xs md:text-sm">
+                      <span className="[font-family:'Poppins',Helvetica] font-medium text-[#b5d33c] text-sm">
                         {post.date}
                       </span>
-                      <span className="[font-family:'Poppins',Helvetica] font-medium text-gray-600 text-xs md:text-sm">
+                      <span className="[font-family:'Poppins',Helvetica] font-medium text-gray-600 text-sm">
                         {post.readTime}
                       </span>
                     </div>
-                    <CardTitle className="[font-family:'Poppins',Helvetica] font-bold text-black text-lg md:text-xl mb-3">
+                    <CardTitle className="[font-family:'Poppins',Helvetica] font-bold text-black text-xl mb-3">
                       {post.title}
                     </CardTitle>
                   </CardHeader>
@@ -673,29 +676,29 @@ export const Desktop = (): JSX.Element => {
           </div>
         </div>
 
-        {/* Customize Section */}
-        <div id="customize" className="py-12 md:py-20 px-4 md:px-[53px] bg-gradient-to-br from-slate-50 to-blue-50">
+        {/* Customize Section - Desktop Only */}
+        <div id="customize" className="py-20 px-[53px] bg-gradient-to-br from-slate-50 to-blue-50">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12 md:mb-16">
-              <h2 className="[font-family:'Poppins',Helvetica] font-bold text-[#b5d33c] text-3xl md:text-5xl mb-4">
+            <div className="text-center mb-16">
+              <h2 className="[font-family:'Poppins',Helvetica] font-bold text-[#b5d33c] text-5xl mb-4">
                 Customize Your Ride
               </h2>
-              <p className="[font-family:'Poppins',Helvetica] font-medium text-black text-lg md:text-xl max-w-4xl mx-auto px-4">
+              <p className="[font-family:'Poppins',Helvetica] font-medium text-black text-xl max-w-4xl mx-auto">
                 Make your GoVV bike uniquely yours with our extensive customization options and accessories
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div className="grid grid-cols-2 gap-12 items-center">
               {/* Customization Options */}
-              <div className="space-y-6 md:space-y-8">
-                <Card className={`${glassCardStyle} p-4 md:p-6`}>
+              <div className="space-y-8">
+                <Card className={`${glassCardStyle} p-6`}>
                   <CardHeader>
-                    <CardTitle className="[font-family:'Poppins',Helvetica] font-bold text-black text-xl md:text-2xl mb-4">
+                    <CardTitle className="[font-family:'Poppins',Helvetica] font-bold text-black text-2xl mb-4">
                       Color Options
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="p-0">
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mb-4">
+                    <div className="grid grid-cols-4 gap-4 mb-4">
                       {[
                         { name: "Lime Green", color: "#b5d33c" },
                         { name: "Ocean Blue", color: "#2563eb" },
@@ -704,10 +707,10 @@ export const Desktop = (): JSX.Element => {
                       ].map((color, index) => (
                         <div key={index} className="text-center">
                           <div 
-                            className="w-10 md:w-12 h-10 md:h-12 rounded-full mx-auto mb-2 border-2 border-gray-300 cursor-pointer hover:scale-110 transition-transform"
+                            className="w-12 h-12 rounded-full mx-auto mb-2 border-2 border-gray-300 cursor-pointer hover:scale-110 transition-transform"
                             style={{ backgroundColor: color.color }}
                           ></div>
-                          <span className="[font-family:'Poppins',Helvetica] font-medium text-black text-xs md:text-sm">
+                          <span className="[font-family:'Poppins',Helvetica] font-medium text-black text-sm">
                             {color.name}
                           </span>
                         </div>
@@ -716,9 +719,9 @@ export const Desktop = (): JSX.Element => {
                   </CardContent>
                 </Card>
 
-                <Card className={`${glassCardStyle} p-4 md:p-6`}>
+                <Card className={`${glassCardStyle} p-6`}>
                   <CardHeader>
-                    <CardTitle className="[font-family:'Poppins',Helvetica] font-bold text-black text-xl md:text-2xl mb-4">
+                    <CardTitle className="[font-family:'Poppins',Helvetica] font-bold text-black text-2xl mb-4">
                       Accessories
                     </CardTitle>
                   </CardHeader>
@@ -732,11 +735,11 @@ export const Desktop = (): JSX.Element => {
                         "Comfort Gel Seat Upgrade",
                         "Extended Battery Pack"
                       ].map((accessory, index) => (
-                        <div key={index} className="flex items-center justify-between p-2 md:p-3 bg-white/10 rounded-lg">
-                          <span className="[font-family:'Poppins',Helvetica] font-medium text-black text-sm md:text-base">
+                        <div key={index} className="flex items-center justify-between p-3 bg-white/10 rounded-lg">
+                          <span className="[font-family:'Poppins',Helvetica] font-medium text-black text-base">
                             {accessory}
                           </span>
-                          <button className="[font-family:'Poppins',Helvetica] font-bold text-[#b5d33c] hover:text-black transition-colors text-xs md:text-sm">
+                          <button className="[font-family:'Poppins',Helvetica] font-bold text-[#b5d33c] hover:text-black transition-colors text-sm">
                             Add +
                           </button>
                         </div>
@@ -748,22 +751,22 @@ export const Desktop = (): JSX.Element => {
 
               {/* Customization Preview */}
               <div className="relative">
-                <Card className={`${glassCardStyle} p-4 md:p-8 text-center`}>
+                <Card className={`${glassCardStyle} p-8 text-center`}>
                   <CardContent className="p-0">
-                    <div className="mb-4 md:mb-6">
+                    <div className="mb-6">
                       <img 
                         src="/figmaAssets/vector-121.svg" 
                         alt="Customizable Bike Preview"
-                        className="w-full max-w-xs md:max-w-md mx-auto h-auto"
+                        className="w-full max-w-md mx-auto h-auto"
                       />
                     </div>
-                    <h3 className="[font-family:'Poppins',Helvetica] font-bold text-black text-xl md:text-2xl mb-3 md:mb-4">
+                    <h3 className="[font-family:'Poppins',Helvetica] font-bold text-black text-2xl mb-4">
                       Your Custom GoVV
                     </h3>
-                    <p className="[font-family:'Poppins',Helvetica] font-medium text-gray-700 mb-4 md:mb-6 text-sm md:text-base">
+                    <p className="[font-family:'Poppins',Helvetica] font-medium text-gray-700 mb-6 text-base">
                       Preview your personalized electric bike with selected colors and accessories
                     </p>
-                    <button className={`${glassCardStyle} px-6 md:px-8 py-2 md:py-3 [font-family:'Poppins',Helvetica] font-bold text-black hover:scale-105 transition-transform text-sm md:text-base`}>
+                    <button className={`${glassCardStyle} px-8 py-3 [font-family:'Poppins',Helvetica] font-bold text-black hover:scale-105 transition-transform text-base`}>
                       Start Customizing
                     </button>
                   </CardContent>
@@ -773,22 +776,22 @@ export const Desktop = (): JSX.Element => {
           </div>
         </div>
 
-        {/* Footer */}
-        <footer className="bg-gradient-to-br from-blue-50 to-slate-100 py-12 md:py-16 px-4 md:px-[53px] border-t border-white/20">
+        {/* Footer - Desktop Only */}
+        <footer className="bg-gradient-to-br from-blue-50 to-slate-100 py-16 px-[53px] border-t border-white/20">
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8 mb-8 md:mb-12">
+            <div className="grid grid-cols-4 gap-8 mb-12">
               {/* Company Info */}
-              <div className="col-span-1 md:col-span-2 mb-6 md:mb-0">
-                <div className="[font-family:'Poppins',Helvetica] font-bold text-black text-2xl md:text-3xl mb-4">
+              <div className="col-span-2">
+                <div className="[font-family:'Poppins',Helvetica] font-bold text-black text-3xl mb-4">
                   GoVV E-BIKE
                 </div>
-                <p className="[font-family:'Poppins',Helvetica] font-medium text-gray-700 mb-4 md:mb-6 max-w-md text-sm md:text-base">
+                <p className="[font-family:'Poppins',Helvetica] font-medium text-gray-700 mb-6 max-w-md text-base">
                   Pioneering the future of urban mobility in India with smart, sustainable electric bicycles that empower communities and protect our environment.
                 </p>
-                <div className="flex space-x-3 md:space-x-4">
+                <div className="flex space-x-4">
                   {["Facebook", "Twitter", "Instagram", "LinkedIn"].map((social, index) => (
-                    <div key={index} className={`${glassCardStyle} w-10 md:w-12 h-10 md:h-12 flex items-center justify-center cursor-pointer hover:scale-110 transition-transform`}>
-                      <span className="[font-family:'Poppins',Helvetica] font-bold text-black text-xs md:text-sm">
+                    <div key={index} className={`${glassCardStyle} w-12 h-12 flex items-center justify-center cursor-pointer hover:scale-110 transition-transform`}>
+                      <span className="[font-family:'Poppins',Helvetica] font-bold text-black text-sm">
                         {social[0]}
                       </span>
                     </div>
@@ -797,8 +800,8 @@ export const Desktop = (): JSX.Element => {
               </div>
 
               {/* Quick Links */}
-              <div className="mb-6 md:mb-0">
-                <h4 className="[font-family:'Poppins',Helvetica] font-bold text-black text-base md:text-lg mb-3 md:mb-4">
+              <div>
+                <h4 className="[font-family:'Poppins',Helvetica] font-bold text-black text-lg mb-4">
                   Quick Links
                 </h4>
                 <ul className="space-y-2">
@@ -813,7 +816,7 @@ export const Desktop = (): JSX.Element => {
                     <li key={index}>
                       <a 
                         href={link.href}
-                        className="[font-family:'Poppins',Helvetica] font-medium text-gray-700 hover:text-[#b5d33c] transition-colors text-sm md:text-base"
+                        className="[font-family:'Poppins',Helvetica] font-medium text-gray-700 hover:text-[#b5d33c] transition-colors text-base"
                       >
                         {link.text}
                       </a>
@@ -824,20 +827,20 @@ export const Desktop = (): JSX.Element => {
 
               {/* Contact Info */}
               <div>
-                <h4 className="[font-family:'Poppins',Helvetica] font-bold text-black text-base md:text-lg mb-3 md:mb-4">
+                <h4 className="[font-family:'Poppins',Helvetica] font-bold text-black text-lg mb-4">
                   Contact Us
                 </h4>
-                <div className="space-y-2 md:space-y-3">
-                  <div className="[font-family:'Poppins',Helvetica] font-medium text-gray-700 text-sm md:text-base">
+                <div className="space-y-3">
+                  <div className="[font-family:'Poppins',Helvetica] font-medium text-gray-700 text-base">
                     📍 Bangalore, Karnataka, India
                   </div>
-                  <div className="[font-family:'Poppins',Helvetica] font-medium text-gray-700 text-sm md:text-base">
+                  <div className="[font-family:'Poppins',Helvetica] font-medium text-gray-700 text-base">
                     📞 +91 98765 43210
                   </div>
-                  <div className="[font-family:'Poppins',Helvetica] font-medium text-gray-700 text-sm md:text-base">
+                  <div className="[font-family:'Poppins',Helvetica] font-medium text-gray-700 text-base">
                     ✉️ hello@govv.in
                   </div>
-                  <div className="[font-family:'Poppins',Helvetica] font-medium text-gray-700 text-sm md:text-base">
+                  <div className="[font-family:'Poppins',Helvetica] font-medium text-gray-700 text-base">
                     🕒 Mon-Sat 9AM-6PM
                   </div>
                 </div>
@@ -845,16 +848,16 @@ export const Desktop = (): JSX.Element => {
             </div>
 
             {/* Bottom Bar */}
-            <div className="border-t border-white/20 pt-6 md:pt-8 flex flex-col md:flex-row justify-between items-center">
-              <div className="[font-family:'Poppins',Helvetica] font-medium text-gray-700 mb-4 md:mb-0 text-sm md:text-base text-center md:text-left">
+            <div className="border-t border-white/20 pt-8 flex justify-between items-center">
+              <div className="[font-family:'Poppins',Helvetica] font-medium text-gray-700 text-base">
                 © 2025 GoVV E-Bike. All rights reserved.
               </div>
-              <div className="flex flex-wrap justify-center md:justify-end space-x-4 md:space-x-6">
+              <div className="flex space-x-6">
                 {["Privacy Policy", "Terms of Service", "Cookie Policy"].map((policy, index) => (
                   <a 
                     key={index}
                     href="#"
-                    className="[font-family:'Poppins',Helvetica] font-medium text-gray-700 hover:text-[#b5d33c] transition-colors text-sm md:text-base"
+                    className="[font-family:'Poppins',Helvetica] font-medium text-gray-700 hover:text-[#b5d33c] transition-colors text-base"
                   >
                     {policy}
                   </a>

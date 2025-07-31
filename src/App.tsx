@@ -5,13 +5,13 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 
-import { Desktop } from "@/pages/Desktop";
+// Remove the .ts extension - this is the correct import
+import GoVVComponent from "@/pages/GoVV";
 
 function Router() {
   return (
     <Switch>
-     
-      <Route path="/" component={Desktop} />
+      <Route path="/" component={GoVVComponent} />
       <Route component={NotFound} />
     </Switch>
   );
