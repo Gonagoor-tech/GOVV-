@@ -241,6 +241,14 @@ export const Desktop = (): JSX.Element => {
                       ))}
                     </div>
 
+                    {/* Center Logo */}
+                    <div className="absolute left-1/2 transform -translate-x-1/2">
+                      <img
+                        src="/lovable-uploads/b2ca6469-0789-4236-b761-3d74a0c5e4d7.png"
+                        alt="GoVV Logo"
+                        className="h-[60px] w-auto"
+                      />
+                    </div>
 
                     {/* Right Navigation */}
                     <div className="flex gap-3">
@@ -261,7 +269,7 @@ export const Desktop = (): JSX.Element => {
                 <div className="absolute w-full h-full top-0 left-0 bg-[url(/figmaAssets/vector-5-1.svg)] bg-cover bg-center" />
                 <div className="absolute top-0 left-0 w-full h-full flex items-center justify-start">
                   <img
-                    className="w-[720px] h-[506px] object-contain ml-0"
+                    className="w-[720px] h-[506px] object-contain ml-0 z-10"
                     alt="Electric Bike"
                     src="/figmaAssets/vector-121.svg"
                   />
