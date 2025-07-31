@@ -257,13 +257,13 @@ export const Desktop = (): JSX.Element => {
                   </div>
                 </div>
 
-                {/* Background and bike image - Original positioning */}
+                {/* Background and bike image - Fixed positioning to match reference */}
                 <div className="absolute w-full h-full top-0 left-0 bg-[url(/figmaAssets/vector-5-1.svg)] bg-cover bg-center" />
-                <div className="absolute top-0 left-0 w-full h-full flex items-center justify-start">
+                <div className="absolute top-[120px] left-[50px] z-10">
                   <img
-                    className="w-[720px] h-[506px] object-contain ml-0"
+                    className="w-[600px] h-[400px] object-contain"
                     alt="Electric Bike"
-                    src="/figmaAssets/vector-121.svg"
+                    src="/lovable-uploads/9e5e0c33-b744-410c-a048-3e4e176c78da.png"
                   />
                 </div>
 
