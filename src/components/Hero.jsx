@@ -8,6 +8,9 @@ import { useRef } from "react";
 import Generating from "./Generating";
 import Notification from "./Notification";
 import CompanyLogos from "./CompanyLogos";
+import { hero } from "../constants";
+import { components, backgrounds, animations } from "../../design-system.js";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   const parallaxRef = useRef(null);
@@ -22,10 +25,24 @@ const Hero = () => {
     >
       <div className="container relative" ref={parallaxRef}>
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
-          <h1 className="h1 mb-6">
-            Empower Your Campus Commute with {` `}
+          <motion.div
+            initial={components.badge.animation.initial}
+            animate={components.badge.animation.animate}
+            transition={components.badge.animation.transition}
+            className={components.badge.className}
+          >
+            {hero.badge}
+          </motion.div>
+          
+          <motion.h1 
+            className="h1 mb-6"
+            initial={components.heading.main.animation.initial}
+            animate={components.heading.main.animation.animate}
+            transition={components.heading.main.animation.transition}
+          >
+            {hero.heading.subtitle} {` `}
             <span className="inline-block relative">
-              Campus Rider{" "}
+              {hero.heading.subtitle2}{" "}
               <img
                 src={curve}
                 className="absolute top-full left-0 w-full xl:-mt-2"
@@ -34,15 +51,32 @@ const Hero = () => {
                 alt="Curve"
               />
             </span>
-          </h1>
-          <p className="body-1 max-w-3xl mx-auto mb-6 text-light-3 lg:mb-8">
-            Designed for life on the move, Campus Rider is GoVV's compact and efficient e-cycle tailored for universities, 
-            tech parks, and institutional campuses. Built for convenience, durability, and zero emissions.
-          </p>
-          <Button href="/pricing" white>
-            Ride the Green Evolution
-          </Button>
+          </motion.h1>
+          
+          <motion.p 
+            className="body-1 max-w-3xl mx-auto mb-6 text-light-3 lg:mb-8"
+            initial={components.paragraph.animation.initial}
+            animate={components.paragraph.animation.animate}
+            transition={components.paragraph.animation.transition}
+          >
+            {hero.description}
+          </motion.p>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+          >
+            <Button href="/pricing" white>
+              {hero.cta.primary}
+            </Button>
+            <Button href="#demo" className="group flex items-center gap-3 text-white hover:text-blue-300 transition-colors">
+              {hero.cta.secondary}
+            </Button>
+          </motion.div>
         </div>
+        
         <div className="relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24">
           <div className="relative z-1 p-0.5 rounded-2xl bg-conic-gradient">
             <div className="relative bg-light-11 rounded-[1rem]">
@@ -54,7 +88,7 @@ const Hero = () => {
                   className="w-full scale-[1.7] translate-y-[8%] md:scale-[1] md:-translate-y-[10%] lg:-translate-y-[23%]"
                   width={1024}
                   height={490}
-                  alt="AI"
+                  alt="Go VV Electric Vehicle"
                 />
 
                 <Generating className="absolute left-4 right-4 bottom-5 md:left-1/2 md:right-auto md:bottom-8 md:w-[31rem] md:-translate-x-1/2" />
@@ -72,7 +106,7 @@ const Hero = () => {
                 <ScrollParallax isAbsolutelyPositioned>
                   <Notification
                     className="hidden absolute -right-[5.5rem] bottom-[11rem] w-[18rem] xl:flex"
-                    title="Route optimization"
+                    title="Smart Navigation"
                   />
                 </ScrollParallax>
               </div>

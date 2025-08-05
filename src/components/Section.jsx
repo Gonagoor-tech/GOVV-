@@ -12,7 +12,7 @@ const Section = ({
     <div
       id={id}
       className={`
-      relative 
+      relative bg-slate-900 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900
       ${
         customPaddings ||
         `py-10 lg:py-16 xl:py-20 ${crosses ? "lg:py-32 xl:py-40" : ""}`

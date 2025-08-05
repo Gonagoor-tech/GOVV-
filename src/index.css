@@ -10,7 +10,7 @@
   --font-sora: "Sora", sans-serif;
   --font-code: "Source Code Pro", monospace;
   --font-grotesk: "Space Grotesk", sans-serif;
-  color-scheme: light;
+  color-scheme: dark;
 }
 
 * {
@@ -18,8 +18,73 @@
 }
 
 @layer base {
+  html {
+    @apply bg-slate-900;
+  }
+  
   body {
-    @apply font-sans bg-light-13 text-light-1 text-base;
+    @apply font-sans bg-slate-900 text-white text-base;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+    min-height: 100vh;
+  }
+  
+  #root {
+    @apply bg-slate-900;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+    min-height: 100vh;
+  }
+  
+  /* Ensure all text is visible on dark backgrounds */
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-white;
+  }
+  
+  p {
+    @apply text-gray-300;
+  }
+  
+  .text-light-1 {
+    @apply text-white;
+  }
+  
+  .text-light-3 {
+    @apply text-gray-300;
+  }
+  
+  .text-light-4 {
+    @apply text-gray-400;
+  }
+  
+  .text-light-8 {
+    @apply text-gray-500;
+  }
+  
+  .text-light-13 {
+    @apply text-white;
+  }
+  
+  .body-2 {
+    @apply text-gray-300;
+  }
+  
+  .caption {
+    @apply text-gray-400;
+  }
+  
+  .tagline {
+    @apply text-gray-300;
+  }
+  
+  .h2 {
+    @apply text-white;
+  }
+  
+  .h4 {
+    @apply text-white;
+  }
+  
+  .h5 {
+    @apply text-white;
   }
 }
 

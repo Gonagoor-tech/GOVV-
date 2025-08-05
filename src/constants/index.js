@@ -36,38 +36,40 @@ import {
   yourlogo,
 } from "../assets";
 
+// Import GoVV content
+import { navigation as govvNavigation, hero, features, stats, about, products, services, testimonials, faq, contact, footer, meta } from "../../content.js";
+
+// Updated navigation with new menu items
 export const navigation = [
   {
     id: "0",
-    title: "Features",
-    url: "#features",
+    title: "Home",
+    url: "#hero",
   },
   {
     id: "1",
-    title: "Pricing",
-    url: "#pricing",
+    title: "Our Bikes",
+    url: "#roadmap",
   },
   {
     id: "2",
-    title: "How to use",
+    title: "Technology",
     url: "#how-to-use",
   },
   {
     id: "3",
-    title: "Roadmap",
-    url: "#roadmap",
+    title: "About",
+    url: "#collaboration",
   },
   {
     id: "4",
-    title: "New account",
-    url: "#signup",
-    onlyMobile: true,
+    title: "Blog",
+    url: "#blog",
   },
   {
     id: "5",
-    title: "Sign in",
-    url: "#login",
-    onlyMobile: true,
+    title: "Customize",
+    url: "#customize",
   },
 ];
 
@@ -77,11 +79,8 @@ export const notificationImages = [notification4, notification3, notification2];
 
 export const companyLogos = [yourlogo, yourlogo, yourlogo, yourlogo, yourlogo];
 
-export const govvServices = [
-  "36V Li-ion Battery",
-  "35-40km Range",
-  "25km/hr Speed",
-];
+// Convert features to services format
+export const govvServices = features.map(feature => feature.title);
 
 export const govvServicesIcons = [
   recording03,
@@ -91,58 +90,32 @@ export const govvServicesIcons = [
   sliders04,
 ];
 
-export const roadmap = [
-  {
-    id: "0",
-    title: "Quality & Accessibility",
-    text: "GoVV's rigorous QA and high-grade components ensure every ride is safe and durable. Cost-efficient design and expansive service network make electric mobility truly accessible.",
-    date: "2024",
-    status: "done",
-    imageUrl: roadmap1,
-    colorful: true,
-  },
-  {
-    id: "1",
-    title: "Innovative Design",
-    text: "Modular frame and long-lasting rechargeable battery system deliver unmatched adaptability and ease of use. Sleek ergonomics and integrated smart interface elevate rider experience.",
-    date: "2024",
-    status: "done",
-    imageUrl: roadmap2,
-  },
-  {
-    id: "2",
-    title: "Environmental Protection",
-    text: "Zero-emission rides and recyclable materials. Reducing urban pollution and promoting sustainable manufacturing to power cleaner commutes.",
-    date: "2024",
-    status: "done",
-    imageUrl: roadmap3,
-  },
-  {
-    id: "3",
-    title: "Smart Mobility Platform",
-    text: "Comprehensive e-mobility ecosystem with fleet-management software, charging hubs, and unified smart-mobility platform for seamless travel.",
-    date: "2024",
-    status: "progress",
-    imageUrl: roadmap4,
-  },
-];
+// Convert products to roadmap format
+export const roadmap = products.map((product, index) => ({
+  id: index.toString(),
+  title: product.name,
+  text: product.description,
+  date: "2024",
+  status: product.popular ? "done" : "progress",
+  imageUrl: index === 0 ? roadmap1 : index === 1 ? roadmap2 : index === 2 ? roadmap3 : roadmap4,
+  colorful: product.popular,
+}));
 
-export const collabText =
-  "Engineered to address India's acute urban transport challenges at scale. Our rugged, zero-emission vehicles and unified smart-mobility platform deliver seamless, cost-effective travel while driving down carbon footprints.";
+export const collabText = about.content;
 
 export const collabContent = [
   {
     id: "0",
-    title: "Last Mile Connectivity",
+    title: "About Go VV",
     text: collabText,
   },
   {
     id: "1",
-    title: "Zero Emissions",
+    title: "Student-Focused",
   },
   {
     id: "2",
-    title: "Smart Fleet Management",
+    title: "Eco-Friendly",
   },
 ];
 
@@ -205,94 +178,25 @@ export const collabApps = [
   },
 ];
 
-export const pricing = [
-  {
-    id: "0",
-    title: "Campus Rider",
-    description: "Compact e-cycle for campus mobility",
-    price: "Contact",
-    features: [
-      "36V Li-ion Battery with 35-40km range",
-      "25km/hr speed with pedal assist",
-      "Steel step-through frame with front suspension",
-    ],
-  },
-  {
-    id: "1",
-    title: "Fleet Solution",
-    description: "Smart fleet management for institutions",
-    price: "Contact",
-    features: [
-      "Comprehensive fleet management software",
-      "Charging hub infrastructure",
-      "Real-time tracking and analytics",
-    ],
-  },
-  {
-    id: "2",
-    title: "Enterprise",
-    description: "Custom solutions for large deployments",
-    price: null,
-    features: [
-      "Custom fleet management solutions",
-      "Dedicated support and maintenance",
-      "Strategic partnership opportunities",
-    ],
-  },
-];
+// Convert products to pricing format
+export const pricing = products.map((product, index) => ({
+  id: index.toString(),
+  title: product.name,
+  description: product.category,
+  price: product.price,
+  features: product.features,
+}));
 
-export const benefits = [
-  {
-    id: "0",
-    title: "Quality & Accessibility",
-    text: "Rigorous QA and high-grade components ensure every ride is safe and durable. Cost-efficient design makes electric mobility truly accessible.",
-    backgroundUrl: "./src/assets/benefits/card-1.svg",
-    iconUrl: benefitIcon1,
-    imageUrl: benefitImage2,
-  },
-  {
-    id: "1",
-    title: "Innovative Design",
-    text: "Modular frame and long-lasting rechargeable battery system deliver unmatched adaptability and ease of use with sleek ergonomics.",
-    backgroundUrl: "./src/assets/benefits/card-2.svg",
-    iconUrl: benefitIcon2,
-    imageUrl: benefitImage2,
-    light: true,
-  },
-  {
-    id: "2",
-    title: "Environmental Protection",
-    text: "Zero-emission rides and recyclable materials. Reducing urban pollution and promoting sustainable manufacturing for cleaner commutes.",
-    backgroundUrl: "./src/assets/benefits/card-3.svg",
-    iconUrl: benefitIcon3,
-    imageUrl: benefitImage2,
-  },
-  {
-    id: "3",
-    title: "Smart Technology",
-    text: "App-enabled ride tracking, integrated smart interface, and fleet management software for seamless campus mobility.",
-    backgroundUrl: "./src/assets/benefits/card-4.svg",
-    iconUrl: benefitIcon4,
-    imageUrl: benefitImage2,
-    light: true,
-  },
-  {
-    id: "4",
-    title: "Last Mile Connectivity",
-    text: "Addressing India's acute urban transport challenges with comprehensive e-mobility ecosystem for universities and tech parks.",
-    backgroundUrl: "./src/assets/benefits/card-5.svg",
-    iconUrl: benefitIcon1,
-    imageUrl: benefitImage2,
-  },
-  {
-    id: "5",
-    title: "Durability & Safety",
-    text: "Steel step-through frame, dual disc brakes, LED lighting with horn, and dust-proof pedal assist sensor for reliable performance.",
-    backgroundUrl: "./src/assets/benefits/card-6.svg",
-    iconUrl: benefitIcon2,
-    imageUrl: benefitImage2,
-  },
-];
+// Convert services to benefits format
+export const benefits = services.map((service, index) => ({
+  id: index.toString(),
+  title: service.title,
+  text: service.description,
+  backgroundUrl: `./src/assets/benefits/card-${(index % 6) + 1}.svg`,
+  iconUrl: index === 0 ? benefitIcon1 : index === 1 ? benefitIcon2 : index === 2 ? benefitIcon3 : benefitIcon4,
+  imageUrl: benefitImage2,
+  light: index % 2 === 1,
+}));
 
 export const socials = [
   {
@@ -326,3 +230,6 @@ export const socials = [
     url: "#",
   },
 ];
+
+// Export GoVV specific content
+export { hero, features, stats, about, products, services, testimonials, faq, contact, footer, meta };
