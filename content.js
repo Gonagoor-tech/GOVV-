@@ -2,13 +2,6 @@
 // GOVV WEBSITE CONTENT
 // ========================================
 
-// BRAND INFORMATION
-export const brand = {
-  name: "Go VV",
-  tagline: "Electrifying Your Campus Commute",
-  description: "Revolutionary electric vehicles designed for modern campus transportation"
-};
-
 // HERO SECTION
 export const hero = {
   badge: "Revolutionary Campus Mobility",
@@ -72,6 +65,129 @@ export const about = {
     "Eco-friendly transportation solutions", 
     "Advanced technology and safety features",
     "Affordable and accessible pricing"
+  ]
+};
+
+// MISSION & VISION
+export const missionVision = {
+  title: "Our Mission & Vision",
+  mission: {
+    icon: "🎯",
+    title: "Our Mission",
+    content: "To revolutionize urban transportation in India by creating smart, sustainable, and affordable electric bicycles that empower people to go further, go freely, and contribute to a cleaner environment."
+  },
+  vision: {
+    icon: "🚀",
+    title: "Our Vision",
+    content: "To become India's leading electric mobility brand, transforming cities into cleaner, more liveable spaces where smart transportation solutions enable people to lead healthier, more connected lives."
+  }
+};
+
+// CORE VALUES
+export const coreValues = {
+  title: "Our Core Values",
+  values: [
+    {
+      icon: "💡",
+      title: "Innovation",
+      description: "Cutting-edge technology"
+    },
+    {
+      icon: "🌱",
+      title: "Sustainability",
+      description: "Eco-friendly solutions"
+    },
+    {
+      icon: "🤝",
+      title: "Community",
+      description: "Building connections"
+    },
+    {
+      icon: "⭐",
+      title: "Quality",
+      description: "Excellence in everything"
+    }
+  ]
+};
+
+// LATEST UPDATES
+export const latestUpdates = {
+  title: "Latest Updates",
+  subtitle: "Stay informed about the latest developments in electric mobility and GoVV innovations",
+  updates: [
+    {
+      date: "January 2025",
+      readTime: "5 min read",
+      title: "The Future of Urban Mobility is Electric",
+      description: "Discover how electric bikes are revolutionizing city transportation with zero emissions and smart technology integration.",
+      link: "Read More →"
+    },
+    {
+      date: "December 2024",
+      readTime: "4 min read",
+      title: "Campus Sustainability with GoVV",
+      description: "Learn how universities across India are adopting GoVV bikes to create greener, more connected campuses.",
+      link: "Read More →"
+    },
+    {
+      date: "November 2024",
+      readTime: "6 min read",
+      title: "Battery Technology Breakthrough",
+      description: "Our latest swappable battery technology offers 60km range and 2-hour fast charging capabilities.",
+      link: "Read More →"
+    }
+  ]
+};
+
+// TEAM
+export const team = {
+  title: "Our Team",
+  subtitle: "Meet the talented individuals driving innovation in electric mobility",
+  members: [
+    {
+      initials: "C",
+      name: "Chirag",
+      role: "CEO",
+      description: "Leading the vision and strategic direction of GoVV, driving innovation in electric mobility across India."
+    },
+    {
+      initials: "R",
+      name: "Raghavendra",
+      role: "Sr Design Architect",
+      description: "Overseeing the design architecture and user experience, ensuring seamless integration of technology and design."
+    },
+    {
+      initials: "SJ",
+      name: "Suraj Jawoor",
+      role: "Lead UI UX Designer",
+      description: "Creating intuitive and engaging user interfaces that enhance the electric bike experience for our customers."
+    },
+    {
+      initials: "A",
+      name: "Arjun",
+      role: "Lead Project Engineer",
+      description: "Managing technical implementation and ensuring robust engineering solutions for our electric mobility platform."
+    },
+    {
+      initials: "MK",
+      name: "Mikkin KM",
+      role: "Lead DevOps Engineer",
+      description: "Optimizing infrastructure and deployment processes to ensure reliable and scalable electric mobility solutions."
+    }
+  ],
+  advisory: [
+    {
+      initials: "D",
+      name: "Dhanush",
+      role: "Advisory Board",
+      description: "Providing strategic guidance and industry expertise to drive GoVV's growth and innovation in the electric mobility sector."
+    },
+    {
+      initials: "P",
+      name: "Prashanth",
+      role: "Advisory Board",
+      description: "Offering valuable insights and mentorship to help shape GoVV's vision and expand our market presence."
+    }
   ]
 };
 
@@ -154,98 +270,45 @@ export const services = [
   }
 ];
 
-// TESTIMONIALS
-export const testimonials = [
-  {
-    name: "Sarah Chen",
-    university: "MIT",
-    content: "Go VV has completely changed my campus experience. I can get from my dorm to any class in minutes, and the battery lasts all week. Best investment I've made as a student!"
-  },
-  {
-    name: "Marcus Johnson", 
-    university: "Stanford",
-    content: "The Go VV Pro is incredible. The GPS navigation helps me find the fastest routes, and the mobile app integration is seamless. It's like having a smart car for campus!"
-  },
-  {
-    name: "Emma Rodriguez",
-    university: "UCLA", 
-    content: "As someone passionate about sustainability, I love that Go VV is eco-friendly. It's reliable, stylish, and helps me reduce my carbon footprint while getting around campus."
-  }
-];
-
-// FAQ
-export const faq = [
-  {
-    question: "How long does the battery last?",
-    answer: "The battery life depends on the model. The Campus model provides 40km range, the Pro model offers 60km, and the Lite model gives you 30km. All models can be fully charged in 4-6 hours."
-  },
-  {
-    question: "Is Go VV safe for campus use?",
-    answer: "Absolutely! All Go VV models are ISO certified and built with advanced safety features including automatic braking systems, LED lighting for visibility, and stability controls designed specifically for campus environments."
-  },
-  {
-    question: "What's included in the warranty?",
-    answer: "Our 2-year comprehensive warranty covers all parts and labor. This includes the battery, motor, electronics, and frame. We also offer extended warranty options for additional peace of mind."
-  },
-  {
-    question: "Do you offer student financing?",
-    answer: "Yes! We offer special financing options for students with flexible payment plans. You can also use your student loan or financial aid to purchase a Go VV. Contact our sales team for details."
-  }
-];
-
 // CONTACT
 export const contact = {
   title: "Get in Touch",
   subtitle: "We're here to help",
   info: {
-    email: "hello@govv.com",
-    phone: "+1 (555) 123-4567",
-    address: "123 Innovation Drive, Tech City, TC 12345"
+    email: "hello@govv.in",
+    phone: "+91 98765 43210",
+    address: "📍 Bangalore, Karnataka, India",
+    hours: "🕒 Mon-Sat 9AM-6PM"
   }
 };
 
 // FOOTER
 export const footer = {
   company: {
-    name: "Go VV",
-    description: "Revolutionizing campus mobility with sustainable electric vehicles designed for modern students."
+    name: "GoVV E-BIKE",
+    description: "Pioneering the future of urban mobility in India with smart, sustainable electric bicycles that empower communities and protect our environment."
   },
-  links: {
-    products: ["Go VV Campus", "Go VV Pro", "Go VV Lite", "Accessories"],
-    support: ["Help Center", "Warranty", "Service Centers", "Contact Us"],
-    company: ["About Us", "Careers", "Press", "Partnerships"],
-    legal: ["Privacy Policy", "Terms of Service", "Warranty Terms", "Safety Information"]
-  }
-};
-
-// NAVIGATION
-export const navigation = {
-  main: [
-    { name: "Products", href: "/products" },
-    { name: "About", href: "/about" },
-    { name: "Support", href: "/support" },
-    { name: "Contact", href: "/contact" }
-  ]
-};
-
-// META
-export const meta = {
-  title: "Go VV - Electrifying Your Campus Commute",
-  description: "Revolutionary electric vehicles designed for modern campus transportation. Smart, sustainable, and student-friendly mobility solutions."
-};
-
-export default {
-  brand,
-  hero,
-  features,
-  stats,
-  about,
-  products,
-  services,
-  testimonials,
-  faq,
-  contact,
-  footer,
-  navigation,
-  meta
+  socials: [
+    { name: "Discord", icon: "discord" },
+    { name: "Twitter", icon: "twitter" },
+    { name: "Instagram", icon: "instagram" },
+    { name: "Telegram", icon: "telegram" },
+    { name: "Facebook", icon: "facebook" }
+  ],
+  quickLinks: [
+    "Home",
+    "Technology", 
+    "Our Bikes",
+    "About",
+    "Blog",
+    "Customize",
+    "Contact Us"
+  ],
+  contact: {
+    address: "📍 Bangalore, Karnataka, India",
+    phone: "📞 +91 98765 43210",
+    email: "✉️ hello@govv.in",
+    hours: "🕒 Mon-Sat 9AM-6PM"
+  },
+  copyright: "© 2025 GoVV E-Bike. All rights reserved."
 }; 

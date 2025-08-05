@@ -1,12 +1,18 @@
 import ButtonGradient from "./assets/svg/ButtonGradient";
 import Benefits from "./components/Benefits";
 import Collaboration from "./components/Collaboration";
+import CoreValues from "./components/CoreValues";
+import Customize from "./components/Customize";
+import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Landing from "./components/Landing";
+import LatestUpdates from "./components/LatestUpdates";
+import MissionVision from "./components/MissionVision";
 import Pricing from "./components/Pricing";
-import Roadmap from "./components/Roadmap";
+
 import Services from "./components/Services";
+import Team from "./components/Team";
 import { motion } from "framer-motion";
 
 const App = () => {
@@ -22,9 +28,14 @@ const App = () => {
         <Landing />
         <Services />
         <Benefits />
+        <MissionVision />
+        <CoreValues />
+        <Team />
+        <LatestUpdates />
         <Collaboration />
         <Pricing />
-        <Roadmap />
+        <Customize />
+        <Contact />
         <Footer />
       </motion.div>
 

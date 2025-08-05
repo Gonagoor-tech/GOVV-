@@ -24,57 +24,110 @@ const Hero = () => {
       id="hero"
     >
       <div className="container relative" ref={parallaxRef}>
-        <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
-          <motion.div
-            initial={components.badge.animation.initial}
-            animate={components.badge.animation.animate}
-            transition={components.badge.animation.transition}
-            className={components.badge.className}
-          >
-            {hero.badge}
-          </motion.div>
-          
-          <motion.h1 
-            className="h1 mb-6"
-            initial={components.heading.main.animation.initial}
-            animate={components.heading.main.animation.animate}
-            transition={components.heading.main.animation.transition}
-          >
-            {hero.heading.subtitle} {` `}
-            <span className="inline-block relative">
-              {hero.heading.subtitle2}{" "}
-              <img
-                src={curve}
-                className="absolute top-full left-0 w-full xl:-mt-2"
-                width={624}
-                height={28}
-                alt="Curve"
-              />
-            </span>
-          </motion.h1>
-          
-          <motion.p 
-            className="body-1 max-w-3xl mx-auto mb-6 text-light-3 lg:mb-8"
-            initial={components.paragraph.animation.initial}
-            animate={components.paragraph.animation.animate}
-            transition={components.paragraph.animation.transition}
-          >
-            {hero.description}
-          </motion.p>
-          
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-          >
-            <Button href="/pricing" white>
-              {hero.cta.primary}
-            </Button>
-            <Button href="#demo" className="group flex items-center gap-3 text-white hover:text-blue-300 transition-colors">
-              {hero.cta.secondary}
-            </Button>
-          </motion.div>
+        <div className="relative z-1 grid lg:grid-cols-2 gap-12 items-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
+          {/* Left side - Text content */}
+          <div className="text-left">
+            <motion.div
+              initial={components.badge.animation.initial}
+              animate={components.badge.animation.animate}
+              transition={components.badge.animation.transition}
+              className={components.badge.className}
+            >
+              {hero.badge}
+            </motion.div>
+            
+            <motion.h1 
+              className="h1 mb-6 text-left"
+              initial={components.heading.main.animation.initial}
+              animate={components.heading.main.animation.animate}
+              transition={components.heading.main.animation.transition}
+            >
+              Smart Campus<br />
+              Mobility for<br />
+              seamless<br />
+              student<br />
+              connectivity
+            </motion.h1>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+              className="flex items-center gap-3 mb-6"
+            >
+              <div className="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center">
+                <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <span className="text-white font-medium">About Go VV</span>
+            </motion.div>
+            
+            <motion.p 
+              className="body-1 mb-8 text-light-3 max-w-2xl"
+              initial={components.paragraph.animation.initial}
+              animate={components.paragraph.animation.animate}
+              transition={components.paragraph.animation.transition}
+            >
+              Go VV was born from a simple idea: campus transportation should be smart, sustainable, and accessible to every student. Our team of engineers, designers, and mobility experts worked together to create electric vehicles that perfectly fit the modern student lifestyle.
+            </motion.p>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8 }}
+              className="flex flex-col sm:flex-row gap-4"
+            >
+              <Button href="/pricing" white>
+                {hero.cta.primary}
+              </Button>
+              <Button href="#demo" className="group flex items-center gap-3 text-white hover:text-blue-300 transition-colors">
+                {hero.cta.secondary}
+              </Button>
+            </motion.div>
+          </div>
+
+          {/* Right side - Circular graphic */}
+          <div className="relative flex justify-center lg:justify-end">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.6, duration: 0.8 }}
+              className="relative"
+            >
+              {/* Main circular graphic */}
+              <div className="relative w-80 h-80 lg:w-96 lg:h-96">
+                {/* Outer circles */}
+                <div className="absolute inset-0 border-2 border-white/20 rounded-full"></div>
+                <div className="absolute inset-4 border-2 border-white/30 rounded-full"></div>
+                <div className="absolute inset-8 border-2 border-white/40 rounded-full"></div>
+                <div className="absolute inset-12 border-2 border-white/50 rounded-full"></div>
+                
+                {/* Center gradient circle */}
+                <div className="absolute inset-16 bg-gradient-to-br from-purple-500 via-pink-500 to-orange-500 rounded-full flex items-center justify-center">
+                  <span className="text-2xl lg:text-3xl font-bold text-white">Go VV</span>
+                </div>
+              </div>
+
+              {/* Cloud icon above */}
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.2, duration: 0.6 }}
+                className="absolute -top-8 -right-8"
+              >
+                <div className="w-16 h-12 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full flex items-center justify-center border-2 border-white">
+                  <svg className="w-8 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/>
+                  </svg>
+                </div>
+                <div className="absolute -bottom-1 -right-1 w-4 h-4 border-2 border-white rounded-full"></div>
+              </motion.div>
+
+              {/* Connection lines */}
+              <div className="absolute top-0 right-0 w-20 h-20 border-t-2 border-r-2 border-white/30 rounded-tr-full"></div>
+            </motion.div>
+          </div>
         </div>
         
         <div className="relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24">

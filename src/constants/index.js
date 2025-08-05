@@ -37,7 +37,20 @@ import {
 } from "../assets";
 
 // Import GoVV content
-import { navigation as govvNavigation, hero, features, stats, about, products, services, testimonials, faq, contact, footer, meta } from "../../content.js";
+import { 
+  hero, 
+  features, 
+  stats, 
+  about, 
+  missionVision,
+  coreValues,
+  latestUpdates,
+  team,
+  products, 
+  services, 
+  contact, 
+  footer
+} from "../../content.js";
 
 // Updated navigation with new menu items
 export const navigation = [
@@ -59,17 +72,22 @@ export const navigation = [
   {
     id: "3",
     title: "About",
-    url: "#collaboration",
+    url: "#mission-vision",
   },
   {
     id: "4",
     title: "Blog",
-    url: "#blog",
+    url: "#latest-updates",
   },
   {
     id: "5",
     title: "Customize",
     url: "#customize",
+  },
+  {
+    id: "6",
+    title: "Contact",
+    url: "#contact",
   },
 ];
 
@@ -198,6 +216,9 @@ export const benefits = services.map((service, index) => ({
   light: index % 2 === 1,
 }));
 
+// Export new content sections
+export { missionVision, coreValues, latestUpdates, team };
+
 export const socials = [
   {
     id: "0",
@@ -232,4 +253,4 @@ export const socials = [
 ];
 
 // Export GoVV specific content
-export { hero, features, stats, about, products, services, testimonials, faq, contact, footer, meta };
+export { hero, features, stats, about, products, services, contact, footer };
